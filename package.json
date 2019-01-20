@@ -1,0 +1,89 @@
+{
+  "name": "typescript-lib-starter",
+  "version": "1.0.0",
+  "description": "<description>",
+  "main": "dist/<name>.umd.js",
+  "module": "dist/<name>.es5.js",
+  "typings": "dist/types/<name>.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "tsc --module commonjs && rollup -c rollup.config.ts && npm run docs",
+    "docs": "typedoc --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs --target es6 --mode file src",
+    "start": "rollup -c rollup.config.ts -w",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "test:prod": "npm run lint && npm run test -- --no-cache",
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "semantic-release": "semantic-release",
+    "precommit": "lint-staged",
+    "init": "ts-node tools/init.ts"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Bendy Zhang",
+    "email": "zb@bndy.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bndynet/typescript-lib-starter.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@bndynet/typedoc-default-themes": "^0.5.1",
+    "@commitlint/cli": "^7.1.2",
+    "@semantic-release/git": "^7.0.8",
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.11.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.9.0",
+    "husky": "^1.3.1",
+    "jest": "^23.6.0",
+    "jest-config": "^23.6.0",
+    "jsdom": "13.1.0",
+    "jsdom-global": "^3.0.2",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.0",
+    "rollup-plugin-babel": "^4.3.0",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "semantic-release": "^15.9.16",
+    "ts-jest": "^22.0.4",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-loader": "^3.5.4",
+    "typedoc": "^0.12.0",
+    "typescript": "^3.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
