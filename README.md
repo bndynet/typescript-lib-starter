@@ -1,14 +1,16 @@
 # typescript-lib-starter
 
-This starter project implements follow features:
+This starter project implements following features:
 
-- Include packages for coding, testing and building
-- Release to NPM automatically
-- Generate documentation of your TypeScript files automatically
-- Script for publishing documentation to your gh-pages branch
-- Default CI scripts for Travis CI includes release and publish automatically
+- :package: Include packages for coding, linting, testing and building
+- :package: Release to NPM automatically
+- :inbox_tray: Build library to UMD and CommonJS modules
+- :blue_book: Generate documentation of your TypeScript files automatically
+- :running: Script for publishing documentation to your gh-pages branch
+- :heavy_check_mark: Check your commit message when `git commit ...`
+- :cl: Default CI scripts for Travis CI includes release and publish automatically
 
-## Start Your Library
+## Start your library
 
 1. Clone this repo:
 
@@ -17,3 +19,6 @@ This starter project implements follow features:
 1. Initialize your library:
 
     `npm i && npm run init` and type your package informations
+
+
+Note: If you want to use Travis CI to publish and release automatically. You must set tokens(**GH_TOKEN** and **NPM_TOKEN**) in Travis CI repo.
