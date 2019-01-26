@@ -36,7 +36,7 @@ rl.question('package name: ', (pkgName: string) => {
                     pkg.repository.url = repoUrl.trim();
 
                     const pkgContent = JSON.stringify(pkg, null, 2);
-                    writeFileSync(path.resolve(__dirname, "..", "_package.json"), pkgContent);
+                    writeFileSync(path.resolve(__dirname, "..", "package.json"), pkgContent);
 
                     echo("#################################")
                     echo("# About to write to package.json:")
