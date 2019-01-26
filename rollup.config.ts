@@ -4,6 +4,9 @@ import sourceMaps from "rollup-plugin-sourcemaps";
 import typescript from "rollup-plugin-typescript2";
 import json from "rollup-plugin-json";
 import babel from "rollup-plugin-babel";
+import sass from "rollup-plugin-sass";
+import autoprefixer from "autoprefixer";
+import postcss from "postcss";
 
 const pkg = require("./package.json");
 
@@ -30,6 +33,12 @@ export default {
     include: "src/**"
   },
   plugins: [
+    sass({
+      output: `dist/${libraryName}.css`,
+      processor: css => postcss([autoprefixer]).process(css,
+        { from: undefined, }  // fix PostCSS without `from` warning
+        ).then(result => result.css)
+    }),
     // Allow json resolution
     json(),
     // Compile TypeScript files
