@@ -7,6 +7,7 @@ import babel from "rollup-plugin-babel";
 import sass from "rollup-plugin-sass";
 import autoprefixer from "autoprefixer";
 import postcss from "postcss";
+import { terser } from "rollup-plugin-terser";
 
 const pkg = require("./package.json");
 
@@ -39,6 +40,7 @@ export default {
         { from: undefined, }  // fix PostCSS without `from` warning
         ).then(result => result.css)
     }),
+    terser(),
     // Allow json resolution
     json(),
     // Compile TypeScript files
