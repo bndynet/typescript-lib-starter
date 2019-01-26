@@ -2,7 +2,8 @@
 
 This starter project implements following features:
 
-- :package: Include packages for coding, linting, testing and building
+- :school_satchel: Include all packages for coding, linting, testing and building
+- :lipstick: Compile sass to css using node-sass, autoprefixer and postcss
 - :package: Release to NPM automatically
 - :inbox_tray: Build library to UMD and CommonJS modules
 - :blue_book: Generate documentation of your TypeScript files automatically
@@ -19,6 +20,21 @@ This starter project implements following features:
 1. Initialize your library:
 
     `npm i && npm run init` and type your package informations
+
+1. Now, you can code your library and bellow commands to start your work:
+
+    ```bash
+    npm start
+    npm run lint
+    npm run build
+    npm run docs
+    npm run test
+    npm run test:watch
+    npm run deploy-docs
+    npm run report-coverage
+    npm run semantic-release
+    npm run precommit
+    ```
 
 
 Note: If you want to use Travis CI to publish and release automatically. You must set tokens(**GH_TOKEN** and **NPM_TOKEN**) in Travis CI repo.
