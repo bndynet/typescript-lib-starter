@@ -8,12 +8,13 @@
 This starter project implements following features:
 
 - :school_satchel: Include all packages for coding, linting, testing and building
-- :lipstick: Compile sass to css using node-sass, autoprefixer and postcss
+- :art: Compile sass to css using node-sass, autoprefixer and postcss
 - :package: Release to NPM automatically
 - :inbox_tray: Build library to UMD and CommonJS modules
 - :blue_book: Generate documentation of your TypeScript files automatically
 - :running: Script for publishing documentation to your gh-pages branch
 - :heavy_check_mark: Check your commit message when `git commit ...`
+- :book: Publish your unit tests report to coveralls.io by CI
 - :cl: Default CI scripts for Travis CI includes release and publish automatically
 
 ## Start your library
@@ -35,9 +36,6 @@ This starter project implements following features:
     npm run docs
     npm run test
     npm run test:watch
-    npm run deploy-docs
-    npm run report-coverage
-    npm run semantic-release
     npm run precommit
     ```
 
