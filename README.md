@@ -1,5 +1,10 @@
 # typescript-lib-starter
 
+[![npm](https://img.shields.io/npm/v/@bndynet/typescript-lib-starter.svg)](https://www.npmjs.com/package/@bndynet/typescript-lib-starter)
+[![Build Status](https://travis-ci.com/bndynet/typescript-lib-starter.svg?branch=master)](https://travis-ci.com/bndynet/typescript-lib-starter)
+[![Coverage Status](https://coveralls.io/repos/github/bndynet/typescript-lib-starter/badge.svg?branch=master)](https://coveralls.io/github/bndynet/typescript-lib-starter?branch=master)
+[![Code Styles](https://img.shields.io/badge/Code_Style-Prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 This starter project implements following features:
 
 - :school_satchel: Include all packages for coding, linting, testing and building
