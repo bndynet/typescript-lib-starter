@@ -14,8 +14,8 @@ This starter project implements following features:
 - :blue_book: Generate documentation of your TypeScript files automatically
 - :running: Script for publishing documentation to your gh-pages branch
 - :heavy_check_mark: Check your commit message when `git commit ...`
-- :book: Publish your unit tests report to coveralls.io by CI
-- :cl: Default CI scripts for Travis CI includes release and publish automatically
+- :book: Publish your unit tests report to [coveralls.io](https://coveralls.io/) by CI
+- :cl: Default CI scripts for [Travis CI](https://travis-ci.com/) includes release and publish automatically
 
 ## Start your library
 
@@ -39,5 +39,8 @@ This starter project implements following features:
     npm run precommit
     ```
 
+NOTE: The below steps will guide you to use Travis CI to document, release and report automatically.
 
-Note: If you want to use Travis CI to publish and release automatically. You must set tokens(**GH_TOKEN** and **NPM_TOKEN**) in Travis CI repo.
+1. Use GitHub account to log in [Travis CI](https://travis-ci.com/), sync repos and enable your repo
+1. Set tokens(**GH_TOKEN** and **NPM_TOKEN** that can be generated at [GitHub](https://github.com/settings/tokens) and [npmjs.com](https://www.npmjs.com/settings/bndy/tokens)) in Travis CI repo to allow to release to NPM and generate gh-pages
+1. Use GitHub account go log in [coveralls.io](https://coveralls.io/), sync repos and enable your repo to allow to report testing
