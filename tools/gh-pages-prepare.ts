@@ -3,6 +3,9 @@ const sh = require("shelljs");
 
 sh.echo("⚑ gh-pages preparing...");
 
+sh.mkdir("-p", "./docs");
+sh.cp("README.md", "./docs/README.md");
+
 sh.cp("-R", "./coverage/lcov-report", "./docs/coverage-report");
 
 sh.cp("-R", "./site", "./docs/site");

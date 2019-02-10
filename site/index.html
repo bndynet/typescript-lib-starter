@@ -1,14 +1,17 @@
 <html>
     <head>
         <title>typescript-lib-starter site</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="180x180" href="https://static.bndy.net/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://static.bndy.net/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https://static.bndy.net/favicon-16x16.png">
-        <link rel="mask-icon" href="https://static.bndy.net/safari-pinned-tab.svg" color="#5bbad5">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://static.bndy.net/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://static.bndy.net/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://static.bndy.net/favicon-16x16.png" />
+        <link rel="mask-icon" href="https://static.bndy.net/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/markdown/lib/markdown.js"></script>
         <style>
             .navbar-brand {
                 text-transform: uppercase;
@@ -73,14 +76,19 @@
                     -->
                 </p>
                 <hr class="my-4" />
-                <p>
-                    Try to run <code>npm run prebuild && npm run build && npm run predeploy-gh-pages</code> to view the final
-                    <b>docs</b> directory for <b>gh-pages</b>.
-                </p>
+                <p>Try to run <code>npm run prebuild && npm run build && npm run predeploy-gh-pages</code> to view the final <b>docs</b> directory for <b>gh-pages</b>.</p>
                 <a class="btn btn-primary btn-lg" href="https://github.com/bndynet/dialog" role="button">
                     Fork me on GitHub
                 </a>
             </div>
+
+            <div id="readme"></div>
         </main>
+
+        <script>
+            axios.get("../README.md").then(function(response) {
+                document.getElementById("readme").innerHTML = markdown.toHTML(response.data);
+            });
+        </script>
     </body>
 </html>

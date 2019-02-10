@@ -55,7 +55,7 @@ Format as:
 
 Note: The **&lt;type&gt;** can be found in **./commitlint.config.js** file.
 
-### Travis CI Integration
+## Travis CI Integration
 
 The below steps will guide you to use Travis CI to document, release and report automatically.
 
