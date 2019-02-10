@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/bndynet/typescript-lib-starter/badge.svg?branch=master)](https://coveralls.io/github/bndynet/typescript-lib-starter?branch=master)
 [![Code Styles](https://img.shields.io/badge/Code_Style-Prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-This starter project implements following features:
+This starter project will standardize coding and publishing for your library, and implements following features:
 
 - :school_satchel: Include all packages for coding, linting, testing and building
 - :art: Compile sass to css using node-sass, autoprefixer and postcss
@@ -39,7 +39,25 @@ This starter project implements following features:
     npm run precommit
     ```
 
-NOTE: The below steps will guide you to use Travis CI to document, release and report automatically.
+## Commit Message Guidelines
+
+All commit message MUST follow https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
+
+Format as:
+
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+Note: The **&lt;type&gt;** can be found in **./commitlint.config.js** file.
+
+### Travis CI Integration
+
+The below steps will guide you to use Travis CI to document, release and report automatically.
 
 1. Use GitHub account to log in [Travis CI](https://travis-ci.com/), sync repos and enable your repo
 1. Set tokens(**GH_TOKEN** and **NPM_TOKEN** that can be generated at [GitHub](https://github.com/settings/tokens) and [npmjs.com](https://www.npmjs.com/settings/bndy/tokens)) in Travis CI repo to allow to release to NPM and generate gh-pages
