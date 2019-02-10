@@ -22,7 +22,8 @@
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "semantic-release": "semantic-release",
     "precommit": "lint-staged",
-    "init": "ts-node tools/init.ts"
+    "init": "ts-node tools/init.ts",
+    "prepublishOnly": "ts-node tools/inject-copyright"
   },
   "keywords": [
     "typescript",
