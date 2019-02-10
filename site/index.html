@@ -8,15 +8,16 @@
         <link rel="icon" type="image/png" sizes="32x32" href="https://static.bndy.net/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="https://static.bndy.net/favicon-16x16.png" />
         <link rel="mask-icon" href="https://static.bndy.net/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="stylesheet" href="style.css" />
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="https://unpkg.com/markdown/lib/markdown.js"></script>
-        <style>
-            .navbar-brand {
-                text-transform: uppercase;
-            }
-        </style>
+        <link rel="stylesheet" href="https://unpkg.com/github-markdown-css/github-markdown.css" />
+        <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
         <!-- dev -->
         <link href="../dist/typescript-lib-starter.css" rel="stylesheet" type="text/css" />
         <script src="../dist/typescript-lib-starter.umd.js"></script>
@@ -28,41 +29,46 @@
         -->
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">typescript-lib-starter</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <a href="https://github.com/bndynet/typescript-lib-starter" class="forkme">
+            <img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+        </a>
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#" style="position:relative;top:-3px;">typescript-lib-starter</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- dev -->
-                        <a class="nav-link" href="../docs/api" target="_blank">API Documentation</a>
-                        <!-- /dev -->
-                        <!-- prod
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <!-- dev -->
+                            <a class="nav-link" href="../docs/api" target="_blank">API Documentation</a>
+                            <!-- /dev -->
+                            <!-- prod
                         <a class="nav-link" href="../api" target="_blank">API Documentation</a>
-                        -->
-                    </li>
-                    <li class="nav-item">
-                        <!-- dev -->
-                        <a class="nav-link" href="../coverage/lcov-report/" target="_blank">Coverage Report</a>
-                        <!-- /dev -->
+                        --></li>
+                        <li class="nav-item">
+                            <!-- dev -->
+                            <a class="nav-link" href="../coverage/lcov-report/" target="_blank">Coverage Report</a>
+                            <!-- /dev -->
 
-                        <!-- prod
+                            <!-- prod
                         <a class="nav-link" href="../coverage-report" target="_blank">Coverage Report</a>
-                        -->
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                        --></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-        <br />
-        <br />
-        <main class="container">
+        <aside>
+            <div id="sub-navs" class="list-group">
+                <a class="list-group-item list-group-item-action" href="#readme">Read me</a>
+                <a class="list-group-item list-group-item-action" href="#example">Example</a>
+            </div>
+        </aside>
+
+        <main data-spy="scroll" data-target="#sub-navs" data-offset="0">
             <div class="jumbotron">
                 <h1 class="display-4">Hello, world!</h1>
                 <p class="lead">
@@ -82,13 +88,13 @@
                 </a>
             </div>
 
-            <div id="readme"></div>
-        </main>
+            <section id="readme" class="markdown-body"></section>
 
-        <script>
-            axios.get("../README.md").then(function(response) {
-                document.getElementById("readme").innerHTML = markdown.toHTML(response.data);
-            });
-        </script>
+            <section id="example">
+                <h1>Example</h1>
+                <p>TODO...</p>
+            </section>
+        </main>
+        <script type="text/javascript" src="./script.js"></script>
     </body>
 </html>

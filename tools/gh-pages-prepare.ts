@@ -6,8 +6,10 @@ sh.echo("⚑ gh-pages preparing...");
 sh.mkdir("-p", "./docs");
 sh.cp("README.md", "./docs/README.md");
 
+sh.rm("-rf", "./docs/coverage-report");
 sh.cp("-R", "./coverage/lcov-report", "./docs/coverage-report");
 
+sh.rm("-rf", "./docs/site");
 sh.cp("-R", "./site", "./docs/site");
 sh.cd("./docs/site");
 sh.ls("*.html").forEach((file: string) => {
