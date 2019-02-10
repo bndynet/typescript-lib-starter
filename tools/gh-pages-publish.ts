@@ -1,9 +1,9 @@
-const { cd, exec, echo, touch } = require("shelljs");
-const { readFileSync } = require("fs");
+const fs = require("fs");
+const sh = require("shelljs");
 const url = require("url");
 
 let repoUrl;
-let pkg = JSON.parse(readFileSync("package.json") as any);
+let pkg = JSON.parse(fs.readFileSync("package.json") as any);
 if (typeof pkg.repository === "object") {
     if (!pkg.repository.hasOwnProperty("url")) {
         throw new Error("URL does not exist in repository section");
@@ -29,13 +29,13 @@ let parsedUrl = url.parse(repoUrl);
 let repository = (parsedUrl.host || "") + (parsedUrl.path || "");
 let ghToken = process.env.GH_TOKEN;
 
-echo("Deploying docs!!!");
-cd("docs");
-touch(".nojekyll");
-exec("git init");
-exec("git add .");
-exec(`git config user.name "${userName}"`);
-exec(`git config user.email "${userMail}"`);
-exec('git commit -m "docs(docs): update gh-pages"');
-exec(`git push --force --quiet "https://${ghToken}@${repository}" master:gh-pages`);
-echo("Docs deployed!!");
+sh.echo("⚑ gh-pages publishing...");
+sh.cd("docs");
+sh.touch(".nojekyll");
+sh.exec("git init");
+sh.exec("git add .");
+sh.exec(`git config user.name "${userName}"`);
+sh.exec(`git config user.email "${userMail}"`);
+sh.exec('git commit -m "docs(docs): update gh-pages"');
+sh.exec(`git push --force --quiet "https://${ghToken}@${repository}" master:gh-pages`);
+sh.echo(`✔ done at ${new Date().toISOString()}`);

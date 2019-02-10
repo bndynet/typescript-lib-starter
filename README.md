@@ -43,4 +43,4 @@ NOTE: The below steps will guide you to use Travis CI to document, release and r
 
 1. Use GitHub account to log in [Travis CI](https://travis-ci.com/), sync repos and enable your repo
 1. Set tokens(**GH_TOKEN** and **NPM_TOKEN** that can be generated at [GitHub](https://github.com/settings/tokens) and [npmjs.com](https://www.npmjs.com/settings/bndy/tokens)) in Travis CI repo to allow to release to NPM and generate gh-pages
-1. Use GitHub account go log in [coveralls.io](https://coveralls.io/), sync repos and enable your repo to allow to report testing
+1. Use GitHub account to log in [coveralls.io](https://coveralls.io/), sync repos and enable your repo to allow to report testing

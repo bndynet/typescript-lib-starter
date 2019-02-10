@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>typescript-lib-starter site</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://static.bndy.net/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://static.bndy.net/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://static.bndy.net/favicon-16x16.png">
+        <link rel="mask-icon" href="https://static.bndy.net/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+        <style>
+            .navbar-brand {
+                text-transform: uppercase;
+            }
+        </style>
+        <!-- dev -->
+        <link href="../dist/typescript-lib-starter.css" rel="stylesheet" type="text/css" />
+        <script src="../dist/typescript-lib-starter.umd.js"></script>
+        <!-- /dev -->
+
+        <!-- prod
+        <link href="https://unpkg.com/@bndynet/typescript-lib-starter/dist/typescript-lib-starter.css" rel="stylesheet" type="text/css" />
+        <script src="https://unpkg.com/@bndynet/typescript-lib-starter/dist/typescript-lib-starter.umd.js"></script>
+        -->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">typescript-lib-starter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- dev -->
+                        <a class="nav-link" href="../docs/api" target="_blank">API Documentation</a>
+                        <!-- /dev -->
+                        <!-- prod
+                        <a class="nav-link" href="../api" target="_blank">API Documentation</a>
+                        -->
+                    </li>
+                    <li class="nav-item">
+                        <!-- dev -->
+                        <a class="nav-link" href="../coverage/lcov-report/" target="_blank">Coverage Report</a>
+                        <!-- /dev -->
+
+                        <!-- prod
+                        <a class="nav-link" href="../coverage-report" target="_blank">Coverage Report</a>
+                        -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br />
+        <br />
+        <main class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">
+                    This is just a template, you can start your site here for this project which will be published to <b>gh-pages</b> with
+                    <!-- dev -->
+                    <a href="../docs/api">API documentation</a> and <a href="../coverage/lcov-report/">coverage report</a>.
+                    <!-- /dev -->
+
+                    <!-- prod
+                    <a href="../api">API documentation</a> and <a href="../coverage-report">coverage report</a>.
+                    -->
+                </p>
+                <hr class="my-4" />
+                <p>
+                    Try to run <code>npm run prebuild && npm run build && npm run predeploy-gh-pages</code> to view the final
+                    <b>docs</b> directory for <b>gh-pages</b>.
+                </p>
+                <a class="btn btn-primary btn-lg" href="https://github.com/bndynet/dialog" role="button">
+                    Fork me on GitHub
+                </a>
+            </div>
+        </main>
+    </body>
+</html>
