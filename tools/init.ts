@@ -26,7 +26,6 @@ rl.question('package name: ', (pkgName: string) => {
                     pkg.description = pkgDescription;
                     pkg.main = `dist/${libName}.umd.js`;
                     pkg.module = `dist/${libName}.es5.js`;
-                    pkg.typings = `dist/types/${libName}.d.ts`;
                     if (username) {
                         pkg.author.name = username.trim();
                     }
