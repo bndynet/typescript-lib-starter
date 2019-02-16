@@ -4,7 +4,7 @@
   "description": "A starter project for creating your typescript library",
   "main": "dist/typescript-lib-starter.umd.js",
   "module": "dist/typescript-lib-starter.es5.js",
-  "typings": "dist/types/typescript-lib-starter.d.ts",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
