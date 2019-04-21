@@ -1,12 +1,14 @@
 {
     "branch": "master",
     "prepare": [
+        "@semantic-release/changelog",
         "@semantic-release/npm",
         {
             "path": "@semantic-release/git",
             "assets": [
                 "package.json",
-                "package-lock.json"
+                "package-lock.json",
+                "CHANGELOG.md"
             ],
         "message": "chore(release): v${nextRelease.version} by CI\n\n${nextRelease.notes}"
         }
