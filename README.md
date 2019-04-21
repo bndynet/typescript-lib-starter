@@ -10,12 +10,12 @@ This starter project will standardize coding and publishing for your library, an
 - :school_satchel: Include all packages for coding, linting, testing and building
 - :art: Compile sass to css using node-sass, autoprefixer and postcss
 - :inbox_tray: Build library to UMD and CommonJS modules
-- :blue_book: Generate documentation of your TypeScript files automatically
+- :blue_book: Generate API documentation of your TypeScript files automatically
 - :heavy_check_mark: Check your commit message when `git commit ...`
 - :cl: Default CI scripts for [Travis CI](https://travis-ci.com/) includes release and publish automatically
-- :running: Script for publishing documentation to your gh-pages branch by CI
 - :bookmark: Generate CHANGELOG.md according to your commits in CI publishing process
 - :book: Publish your unit tests report to [coveralls.io](https://coveralls.io/) by CI
+- :earth_asia: Publish API documentation, converage, demo and changelog to your gh-pages branch as your project site by CI
 - :package: Release to NPM automatically by CI
 
 ## Start your library

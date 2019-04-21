@@ -5,6 +5,7 @@ sh.echo("⚑ gh-pages preparing...");
 
 sh.mkdir("-p", "./docs");
 sh.cp("README.md", "./docs/README.md");
+sh.cp("CHANGELOG.md", "./docs/CHANGELOG.md");
 
 sh.rm("-rf", "./docs/coverage-report");
 sh.cp("-R", "./coverage/lcov-report", "./docs/coverage-report");
