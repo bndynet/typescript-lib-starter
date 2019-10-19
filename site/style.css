@@ -1,3 +1,6 @@
+html {
+  font-size: 14px;
+}
 aside {
   position: fixed;
   top: 80px;

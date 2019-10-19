@@ -38,9 +38,23 @@ rl.question('package name: ', (pkgName: string) => {
           writeFileSync(path.resolve(__dirname, '..', 'package.json'), pkgContent);
 
           echo('#################################');
-          echo('# About to write to package.json:');
+          echo('# Generate package.json:');
           echo(pkgContent);
           rl.close();
+
+          echo('#################################');
+          echo('# Generate site:');
+          const templateIndexFilePath = path.resolve(__dirname, '../_templates', 'index.html');
+          const indexFilePath = path.resolve(__dirname, '../site', 'index.html');
+          let siteIndexHtml =  readFileSync(templateIndexFilePath, 'utf8');
+          siteIndexHtml = siteIndexHtml.replace(/{{package.name}}/g, pkg.name)
+            .replace(/{{package.subname}}/g, libName)
+            .replace(/{{package.repository.url}}/g, pkg.repository.url);
+          writeFileSync(indexFilePath, siteIndexHtml, (werr: any) => {
+            if (werr) {
+              throw werr;
+            }
+          });
 
           echo('#################################');
           echo('# Install dependencies:');
