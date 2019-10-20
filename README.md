@@ -22,7 +22,7 @@ This starter project will standardize coding and publishing for your library, an
 
 1. Clone this repo:
 
-    `git clone https://github.com/bndynet/typescript-lib-starter.git <your-location>`
+    `git clone https://github.com/bndynet/typescript-lib-starter.git <your-location> --depth 1`
 
 1. Initialize your library:
 
