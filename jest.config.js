@@ -2,6 +2,8 @@ module.exports = {
     verbose: true,
     transform: {
         ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+    },
+    moduleNameMapper: {
         ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
     },
     testEnvironment: "node",
