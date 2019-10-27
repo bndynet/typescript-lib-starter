@@ -4,9 +4,16 @@ module.exports = {
   logLevel: 'info', // debug, info, silent
   startPath: '/site/index.html',
   index: 'index.html',
+  notify: true,
   server: {
     baseDir: './',
-    directory: true,
+    directory: false,
     index: 'index.html',
+    middleware: function(req, res, next) {
+      if (req.url.endsWith('/')) {
+        req.url += 'index.html';
+      }
+      return next();
+    },
   }
 };
