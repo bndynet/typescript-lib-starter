@@ -15,8 +15,9 @@
     "docs": "typedoc --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --target es6 --mode file src",
     "test": "jest --coverage",
     "watch": "rollup -c rollup.config.ts -w",
+    "dev": "lite-server -c configs/bs-config.js",
     "start": "concurrently --kill-others \"npm run watch\" \"npm run site-serv\"",
-    "site-serv": "npm run docs && npm run test && http-server ./ -p 8081 -o /site/",
+    "site-serv": "npm run docs && npm run test && lite-server",
     "test:watch": "jest --coverage --watch",
     "test:prod": "npm run lint && npm run test -- --no-cache",
     "predeploy-gh-pages": "ts-node tools/gh-pages-prepare",
@@ -62,7 +63,6 @@
     "concurrently": "^5.0.0",
     "coveralls": "^3.0.2",
     "eslint": "^5.9.0",
-    "http-server": "^0.11.1",
     "husky": "^1.3.1",
     "jest": "^23.6.0",
     "jest-config": "^23.6.0",
@@ -70,6 +70,7 @@
     "jsdom": "13.1.0",
     "jsdom-global": "^3.0.2",
     "lint-staged": "^8.1.0",
+    "lite-server": "^2.5.4",
     "node-sass": "^4.11.0",
     "postcss": "^7.0.14",
     "prettier": "^1.15.3",
@@ -91,8 +92,8 @@
     "tslint-config-standard": "^8.0.1",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-loader": "^3.5.4",
-    "typedoc": "^0.12.0",
-    "typescript": "^3.2.2"
+    "typedoc": "^0.15.0",
+    "typescript": "^3.6.4"
   },
   "husky": {
     "hooks": {
