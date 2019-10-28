@@ -1,4 +1,4 @@
-import { plus } from '../src';
+import { plus } from './hi';
 
 describe('Hi', () => {
   it('1 + 1 should equal to 2', () => {

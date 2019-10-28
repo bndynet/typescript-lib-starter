@@ -9,11 +9,11 @@
     "dist"
   ],
   "scripts": {
-    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "eslint -c ./configs/.eslintrc.js ./src/**/*.ts",
     "prebuild": "rimraf dist docs",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts && npm run docs",
     "docs": "typedoc --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --target es6 --mode file src",
-    "test": "jest --coverage",
+    "test": "jest --config=configs/jest.config.js --coverage",
     "watch": "rollup -c rollup.config.ts -w",
     "start": "concurrently --kill-others \"npm run watch\" \"npm run site-serv\"",
     "site-serv": "npm run docs && npm run test && lite-server -c configs/bs-config.js",
@@ -54,14 +54,18 @@
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/git": "^7.0.8",
     "@types/jest": "^23.3.12",
-    "@types/node": "^10.11.0",
+    "@types/node": "^12.11.7",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
     "autoprefixer": "^9.4.6",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "concurrently": "^5.0.0",
     "coveralls": "^3.0.2",
-    "eslint": "^5.9.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "husky": "^1.3.1",
     "jest": "^24.9.0",
     "jest-config": "^23.6.0",
@@ -86,11 +90,6 @@
     "semantic-release": "^15.9.16",
     "ts-jest": "^24.1.0",
     "ts-node": "^7.0.1",
-    "tslint": "^5.12.1",
-    "tslint-config-prettier": "^1.17.0",
-    "tslint-config-standard": "^8.0.1",
-    "tslint-eslint-rules": "^5.4.0",
-    "tslint-loader": "^3.5.4",
     "typedoc": "^0.15.0",
     "typescript": "^3.6.4"
   },
@@ -105,5 +104,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "dependencies": {}
 }

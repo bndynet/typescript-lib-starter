@@ -1,14 +1,16 @@
 module.exports = {
   verbose: true,
+  rootDir: '../',
+  roots: ['<rootDir>/src/'],
   preset: 'ts-jest',
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
   testEnvironment: 'node',
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
-  setupFilesAfterEnv: ['./test/_setup.ts'],
+  setupFilesAfterEnv: ['./configs/jest.setup.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js'],
-  coveragePathIgnorePatterns: ['/node_modules/', '/test/', '/src/styles/', 'src/index.ts'],
+  coveragePathIgnorePatterns: ['/node_modules/', '/src/styles/', 'src/index.ts'],
   coverageThreshold: {
     global: {
       branches: 60,
@@ -18,4 +20,5 @@ module.exports = {
     },
   },
   collectCoverageFrom: ['src/**/*.{js,ts,tsx}'],
+  coverageDirectory: 'coverage',
 };
