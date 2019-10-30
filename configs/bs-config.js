@@ -5,6 +5,7 @@ module.exports = {
   startPath: '/site/index.html',
   index: 'index.html',
   notify: true,
+  files: ['site', 'dist/**/*.js', 'dist/**/*.css'],
   server: {
     baseDir: './',
     directory: false,

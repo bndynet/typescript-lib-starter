@@ -11,10 +11,10 @@
   "scripts": {
     "lint": "eslint -c ./configs/.eslintrc.js ./src/**/*.ts",
     "prebuild": "rimraf dist docs",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts && npm run docs",
-    "docs": "typedoc --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --target es6 --mode file src",
+    "build": "tsc --project ./configs/tsconfig.json &&  rollup --config ./configs/rollup.config.ts && npm run docs",
+    "docs": "typedoc --tsconfig ./configs/tsconfig.json --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --mode file",
     "test": "jest --config=configs/jest.config.js --coverage",
-    "watch": "rollup -c rollup.config.ts -w",
+    "watch": "rollup --config ./configs/rollup.config.ts -w",
     "start": "concurrently --kill-others \"npm run watch\" \"npm run site-serv\"",
     "site-serv": "npm run docs && npm run test && lite-server -c configs/bs-config.js",
     "test:watch": "jest --coverage --watch",
@@ -86,7 +86,7 @@
     "rollup-plugin-sass": "^1.1.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-terser": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.18.0",
+    "rollup-plugin-typescript2": "^0.18.1",
     "semantic-release": "^15.9.16",
     "ts-jest": "^24.1.0",
     "ts-node": "^7.0.1",
@@ -95,13 +95,13 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "commit-msg": "commitlint --config ./configs/commitlint.config.js -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
-      "prettier --write",
+      "prettier --config ./configs/prettier.config.js --write",
       "git add"
     ]
   },

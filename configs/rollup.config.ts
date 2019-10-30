@@ -9,7 +9,7 @@ import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
 import { terser } from 'rollup-plugin-terser';
 
-const pkg = require('./package.json');
+const pkg = require('../package.json');
 
 const libraryName = pkg.name.indexOf('/') > 0 ? pkg.name.split('/')[1].toLocaleLowerCase() : pkg.name.toLocaleLowerCase();
 
@@ -48,7 +48,10 @@ export default {
     // Allow json resolution
     json(),
     // Compile TypeScript files
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      tsconfig: 'configs/tsconfig.json',
+      useTsconfigDeclarationDir: true,
+    }),
     // Allow bundling cjs modules (unlike webpack, rollup doesn"t understand cjs)
     commonjs({
       include: 'node_modules/**',
