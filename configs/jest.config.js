@@ -6,6 +6,11 @@ module.exports = {
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
+  globals: {
+    'ts-jest': {
+      diagnostics: false,
+    },
+  },
   testEnvironment: 'node',
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
   setupFilesAfterEnv: ['./configs/jest.setup.ts'],
