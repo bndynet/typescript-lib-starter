@@ -12,16 +12,13 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "listFiles": false,
-    "declarationDir": "../dist/types",
-    "outDir": "../dist/lib",
+    "declarationDir": "./dist/types",
+    "outDir": "./dist/lib",
     "typeRoots": [
-      "../node_modules/@types"
+      "./node_modules/@types"
     ]
   },
   "include": [
-    "../src/**/*"
-  ],
-  "exclude": [
-    "../src/**/*.spec.ts"
+    "./src/**/*"
   ]
 }

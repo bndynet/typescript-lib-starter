@@ -1,9 +1,6 @@
 {
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.options": {
-    "configFile": "./configs/.eslintrc.js"
-  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",

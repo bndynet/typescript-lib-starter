@@ -1,6 +1,6 @@
 module.exports = {
   verbose: true,
-  rootDir: '../',
+  rootDir: './',
   roots: ['<rootDir>/src/'],
   preset: 'ts-jest',
   moduleNameMapper: {
@@ -13,7 +13,7 @@ module.exports = {
   },
   testEnvironment: 'node',
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
-  setupFilesAfterEnv: ['./configs/jest.setup.ts'],
+  setupFilesAfterEnv: ['./jest.setup.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js'],
   coveragePathIgnorePatterns: ['/node_modules/', '/src/styles/', 'src/index.ts'],
   coverageThreshold: {

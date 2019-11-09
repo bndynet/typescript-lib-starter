@@ -9,14 +9,14 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint -c ./configs/.eslintrc.js ./src/**/*.ts",
+    "lint": "eslint ./src/**/*.ts",
     "prebuild": "rimraf dist docs",
-    "build": "tsc --project ./configs/tsconfig.json &&  rollup --config ./configs/rollup.config.ts && npm run docs",
-    "docs": "typedoc --tsconfig ./configs/tsconfig.json --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --mode file",
-    "test": "jest --config=configs/jest.config.js --coverage",
-    "watch": "rollup --config ./configs/rollup.config.ts -w",
+    "build": "tsc && rollup --config ./rollup.config.ts && npm run docs",
+    "docs": "typedoc --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --mode file",
+    "test": "jest --coverage",
+    "watch": "rollup --config ./rollup.config.ts -w",
     "start": "concurrently --kill-others \"npm run watch\" \"npm run site-serv\"",
-    "site-serv": "npm run docs && npm run test && lite-server -c configs/bs-config.js",
+    "site-serv": "npm run docs && npm run test && lite-server",
     "test:watch": "jest --coverage --watch",
     "test:prod": "npm run lint && npm run test -- --no-cache",
     "predeploy-gh-pages": "ts-node tools/gh-pages-prepare",
@@ -95,13 +95,13 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint --config ./configs/commitlint.config.js -E HUSKY_GIT_PARAMS",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
-      "prettier --config ./configs/prettier.config.js --write",
+      "prettier --write",
       "git add"
     ]
   },
