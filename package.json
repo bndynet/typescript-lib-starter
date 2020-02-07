@@ -49,6 +49,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@bndynet/cli": "^1.1.0",
     "@bndynet/typedoc-default-themes": "^0.5.1",
     "@commitlint/cli": "^7.1.2",
     "@semantic-release/changelog": "^3.0.2",
