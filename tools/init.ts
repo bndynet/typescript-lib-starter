@@ -1,16 +1,12 @@
 const path = require('path');
-const readline = require('readline');
-const { echo, exec } = require('shelljs');
-const { readFileSync, writeFileSync } = require('fs');
-
 const cli = require('@bndynet/cli');
 
-cli.info(`
+cli.print(cli.styles.info(`
 # This utility will walk you through creating a package.json file.
 # It only covers the most common items, and tries to guess sensible defaults.
 
 # Use "npm i"  to install the default packages.
-`);
+`));
 
 cli.questions(['Your package name:', 'Your package description:', 'Author name:', 'Author email:', 'Git repository url:']).then((answers: any[]) => {
   const pkgName = answers[0];
@@ -19,7 +15,7 @@ cli.questions(['Your package name:', 'Your package description:', 'Author name:'
   const username = answers[2].trim();
   const useremail = answers[3].trim();
   const repoUrl = answers[4].trim();
-  const pkgJson = cli.getPackage('../package.json');
+  const pkgJson = JSON.parse(cli.readFile(path.resolve(__dirname, '..', 'package.json')));
 
   pkgJson.name = pkgName;
   pkgJson.description = pkgDescription;
@@ -33,26 +29,27 @@ cli.questions(['Your package name:', 'Your package description:', 'Author name:'
   }
   pkgJson.repository.url = repoUrl;
 
-  cli.startSection('Generate package.json file');
-  const pkgContent = JSON.stringify(pkgJson, null, 2);
-  writeFileSync(path.resolve(__dirname, '..', 'package.json'), pkgContent);
-  cli.print(pkgContent);
-  cli.success('done', true);
+  cli.startSection('init project');
 
-  cli.startSection('Generate Site');
+  const pkgContent = JSON.stringify(pkgJson, null, 2);
+  cli.log('generate package.json ...')
+  cli.writeFile(path.resolve(__dirname, '..', 'package.json'), pkgContent, () => {});
+  cli.success('done');
+
+  cli.log('generate project site ...');
   const templateIndexFilePath = path.resolve(__dirname, '../_templates', 'index.html');
   const indexFilePath = path.resolve(__dirname, '../site', 'index.html');
-  let siteIndexHtml = readFileSync(templateIndexFilePath, 'utf8');
+  let siteIndexHtml = cli.readFile(templateIndexFilePath);
   siteIndexHtml = siteIndexHtml
     .replace(/{{package.name}}/g, pkgJson.name)
     .replace(/{{package.subname}}/g, libName)
     .replace(/{{package.repository.url}}/g, pkgJson.repository.url);
-  writeFileSync(indexFilePath, siteIndexHtml, (werr: any) => {
-    if (werr) {
-      throw werr;
-    }
-  });
+  cli.writeFile(indexFilePath, siteIndexHtml, () => {});
+  cli.success('done');
 
-  cli.startSection('Install dependencies');
-  cli.run('npm i');
+  cli.log('install dependencies ...');
+  cli.beginRun('npm i', (code: number) => {
+    code === 0 && cli.success('Your project is ready.')
+    cli.print('');
+   });
 });
