@@ -1,0 +1,63 @@
+name: Release
+on: push
+# on:
+#   release:
+#     types: [published]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build package
+      run: |
+        npm run build --if-present
+
+    - name: Semantic release
+      id: semantic
+      uses: cycjimmy/semantic-release-action@v2.5.0
+      with:
+        semantic_version: 17.0.8
+        extra_plugins: |
+          @semantic-release/commit-analyzer
+          @semantic-release/release-notes-generator
+          @semantic-release/changelog
+          @semantic-release/npm
+          @semantic-release/github
+          @semantic-release/git
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: Publish to NPM
+      if: steps.semantic.outputs.new_release_published == 'true'
+      run: |
+        npm publish
+        echo ${{ steps.semantic.outputs.new_release_version }}
+
+    - name: Publish to GitHub
+      if: steps.semantic.outputs.new_release_published == 'true'
+      uses: actions/setup-node@v1
+      with:
+        registry-url: 'https://npm.pkg.github.com'
+      run: |
+        npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
