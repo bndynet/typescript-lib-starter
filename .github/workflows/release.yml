@@ -1,9 +1,6 @@
 name: Release
 
 on: push
-# on:
-#   release:
-#     types: [published]
 
 jobs:
   build:
@@ -15,7 +12,6 @@ jobs:
         node-version: [12.x]
 
     steps:
-
     - name: Checkout code
       uses: actions/checkout@v2
       with:
