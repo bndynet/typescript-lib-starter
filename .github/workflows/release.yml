@@ -18,6 +18,9 @@ jobs:
 
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        persist-credentials: false
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -33,30 +36,21 @@ jobs:
         npm run build --if-present
 
     - name: Semantic release to NPM
-      id: semantic
-      uses: cycjimmy/semantic-release-action@v2.5.0
-      with:
-        semantic_version: 17.2.2
-        extra_plugins: |
-          @semantic-release/commit-analyzer
-          @semantic-release/release-notes-generator
-          @semantic-release/changelog
-          @semantic-release/npm
-          @semantic-release/github
-          @semantic-release/git
+      run: npx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    - name: Setup registry to GitHub
-      if: steps.semantic.outputs.new_release_published == 'true'
-      uses: actions/setup-node@v1
-      with:
-        registry-url: 'https://npm.pkg.github.com'
+    # - name: Setup registry to GitHub
+    #   if: steps.semantic.outputs.new_release_published == 'true'
+    #   uses: actions/setup-node@v1
+    #   with:
+    #     registry-url: 'https://npm.pkg.github.com'
 
-    - name: Publish to GitHub
-      if: steps.semantic.outputs.new_release_published == 'true'
-      run: |
-        npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Publish to GitHub
+    #   if: steps.semantic.outputs.new_release_published == 'true'
+    #   run: |
+    #     npm publish
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
