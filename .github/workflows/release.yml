@@ -44,6 +44,10 @@ jobs:
         registry-url: https://npm.pkg.github.com/
         scope: '@bndynet'
 
+    - name: Authenticate with the GitHub Package registry
+      run:
+        echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+
     - name: Publish to GitHub
       run: |
         npm publish
