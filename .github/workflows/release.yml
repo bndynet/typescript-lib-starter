@@ -1,4 +1,5 @@
 name: Release
+
 on: push
 # on:
 #   release:
@@ -22,6 +23,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+        registry-url: https://registry.npmjs.org/
 
     - name: Install dependencies
       run: npm install
@@ -30,7 +32,7 @@ jobs:
       run: |
         npm run build --if-present
 
-    - name: Semantic release
+    - name: Semantic release to NPM
       id: semantic
       uses: cycjimmy/semantic-release-action@v2.5.0
       with:
@@ -45,12 +47,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-    - name: Publish to NPM
-      if: steps.semantic.outputs.new_release_published == 'true'
-      run: |
-        npm publish
-        echo ${{ steps.semantic.outputs.new_release_version }}
 
     - name: Setup registry to GitHub
       if: steps.semantic.outputs.new_release_published == 'true'
