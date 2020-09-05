@@ -75,6 +75,7 @@
     "lint-staged": "^8.1.0",
     "lite-server": "^2.5.4",
     "node-sass": "^5.0.0",
+    "organize-imports-cli": "^0.8.0",
     "postcss": "^7.0.14",
     "prettier": "^2.1.2",
     "rimraf": "^2.6.2",
@@ -101,6 +102,7 @@
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
+      "organize-imports-cli",
       "prettier --write",
       "git add"
     ]
