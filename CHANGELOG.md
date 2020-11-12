@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.2...v1.0.3) (2020-11-12)
+
+
+### Bug Fixes
+
+* try to publish github ([82a29a0](https://github.com/bndynet/typescript-lib-starter/commit/82a29a0d965caea0a6fc5eb1e1835ab9cc58cb91))
+
 ## [1.0.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.1...v1.0.2) (2020-11-12)
 
 
