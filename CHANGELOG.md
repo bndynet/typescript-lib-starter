@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.3...v1.1.4) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** change registry-url to try again ([bc63520](https://github.com/bndynet/typescript-lib-starter/commit/bc63520899e34785a6eea0a2992dce317a65df36))
+
 ## [1.1.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.2...v1.1.3) (2020-11-12)
 
 
