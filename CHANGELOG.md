@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.0...v1.0.1) (2020-11-12)
+
+
+### Bug Fixes
+
+* indent size ([faeb829](https://github.com/bndynet/typescript-lib-starter/commit/faeb8298fd8f0a1a1b4eddd2448bed66665399af))
+
 # 1.0.0 (2020-11-12)
 
 
