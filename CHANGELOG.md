@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.5...v1.1.6) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** new node to authenticate github registry ([5d01266](https://github.com/bndynet/typescript-lib-starter/commit/5d012666cf1a2b941f250f49ad88bd42a576b827))
+
 ## [1.1.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.4...v1.1.5) (2020-11-12)
 
 
