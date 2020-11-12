@@ -41,8 +41,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        registry-url: https://npm.pkg.github.com/
-        scope: '@bndynet'
+        #registry-url: https://npm.pkg.github.com/
+        #scope: '@bndynet'
 
     - name: Install dependencies
       run: npm install
@@ -57,6 +57,7 @@ jobs:
 
     - name: Publish to GitHub
       run: |
+        npm config set registry //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
         npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
