@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.2...v1.1.3) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** add scope to try again ([ff73d00](https://github.com/bndynet/typescript-lib-starter/commit/ff73d0025d36d5c1a60c721f0242b465e96f96b4))
+
 ## [1.1.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.1...v1.1.2) (2020-11-12)
 
 
