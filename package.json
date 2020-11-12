@@ -1,6 +1,6 @@
 {
   "name": "typescript-lib-starter",
-  "version": "0.0.0-dev",
+  "version": "1.0.0",
   "description": "A starter project for creating your typescript library",
   "main": "dist/typescript-lib-starter.umd.js",
   "module": "dist/typescript-lib-starter.es5.js",
