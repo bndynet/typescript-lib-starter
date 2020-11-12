@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.4...v1.1.5) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** add @ prefix to scope ([675aecb](https://github.com/bndynet/typescript-lib-starter/commit/675aecb0ba854888b9c178895a8bcb1446f278a2))
+
 ## [1.1.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.3...v1.1.4) (2020-11-12)
 
 
