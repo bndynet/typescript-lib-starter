@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.1...v1.0.2) (2020-11-12)
+
+
+### Bug Fixes
+
+* duplicated publish ([b46b68b](https://github.com/bndynet/typescript-lib-starter/commit/b46b68b0d236991838aa28bca1a626a064a8db32))
+* try to use official semantic-release instead of its action ([9156ed6](https://github.com/bndynet/typescript-lib-starter/commit/9156ed6c03f68993cbf5a7aef646a086aac17f26))
+* update semantic-release and plugins version ([299d040](https://github.com/bndynet/typescript-lib-starter/commit/299d0405ad2ca781960afe57aa7a5735f55a4ba5))
+
 ## [1.0.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.0...v1.0.1) (2020-11-12)
 
 
