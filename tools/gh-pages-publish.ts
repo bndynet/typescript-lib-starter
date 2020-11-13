@@ -27,7 +27,7 @@ if (typeof pkg.author === 'object') {
 
 let parsedUrl = url.parse(repoUrl);
 let repository = (parsedUrl.host || '') + (parsedUrl.path || '');
-let ghToken = process.env.GH_TOKEN;
+let ghToken = process.env.GITHUB_TOKEN;
 
 sh.echo('⚑ gh-pages publishing...');
 sh.cd('docs');
