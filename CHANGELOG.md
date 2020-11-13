@@ -1,3 +1,12 @@
+## [1.1.7](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.6...v1.1.7) (2020-11-13)
+
+
+### Bug Fixes
+
+* comment npm publish code for github ([0a5234c](https://github.com/bndynet/typescript-lib-starter/commit/0a5234cd347b692d36662ee79c29db6066c34024))
+* multiple jobs to publish ([5d209c2](https://github.com/bndynet/typescript-lib-starter/commit/5d209c2c9bf09c93e40cade35e029761ac1a1d4f))
+* use semantic-release instead of official publish ([f3db174](https://github.com/bndynet/typescript-lib-starter/commit/f3db17416d853ea25e99c3f00721a0d0605e7634))
+
 ## [1.1.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.5...v1.1.6) (2020-11-12)
 
 
