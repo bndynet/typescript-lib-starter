@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.9...v1.2.0) (2020-11-13)
+
+
+### Features
+
+* disable semantic-release publish to use npm publish ([51ec044](https://github.com/bndynet/typescript-lib-starter/commit/51ec044fa56c7483a4d8e565923f7a7c1dac2362))
+
 ## [1.1.9](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.8...v1.1.9) (2020-11-13)
 
 
