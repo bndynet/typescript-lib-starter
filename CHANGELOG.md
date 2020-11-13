@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.7...v1.1.8) (2020-11-13)
+
+
+### Bug Fixes
+
+* change job name ([7c9b2b6](https://github.com/bndynet/typescript-lib-starter/commit/7c9b2b6712a92bfa7326b56ee091bf86342c1c58))
+
 ## [1.1.7](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.6...v1.1.7) (2020-11-13)
 
 
