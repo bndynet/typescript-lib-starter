@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.8...v1.1.9) (2020-11-13)
+
+
+### Bug Fixes
+
+* retrigger job ([dd4d25d](https://github.com/bndynet/typescript-lib-starter/commit/dd4d25dff64d529f034fdb6c4e775b5f4dacab78))
+
 ## [1.1.8](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.7...v1.1.8) (2020-11-13)
 
 
