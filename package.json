@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint ./src/**/*.ts",
     "prebuild": "rimraf dist docs",
-    "build": "tsc && rollup --config ./rollup.config.ts && npm run docs",
+    "build": "tsc && rollup --config ./rollup.config.ts && npm run docs && ts-node tools/inject-copyright",
     "docs": "typedoc --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --mode file",
     "test": "jest --coverage",
     "watch": "rollup --config ./rollup.config.ts -w",
@@ -24,8 +24,7 @@
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "semantic-release": "semantic-release",
     "precommit": "lint-staged",
-    "init": "ts-node tools/init.ts",
-    "prepublishOnly": "ts-node tools/inject-copyright"
+    "init": "ts-node tools/init.ts"
   },
   "keywords": [
     "typescript",
