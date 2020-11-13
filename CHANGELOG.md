@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.2.0...v1.2.1) (2020-11-13)
+
+
+### Bug Fixes
+
+* disable not work ([8efa5fd](https://github.com/bndynet/typescript-lib-starter/commit/8efa5fdf80a95d81ccf19f1e29ad92c0dd56840d))
+
 # [1.2.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.9...v1.2.0) (2020-11-13)
 
 
