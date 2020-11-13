@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.2.1...v1.2.2) (2020-11-13)
+
+
+### Bug Fixes
+
+* **pipeline:** enable all steps ([a752a27](https://github.com/bndynet/typescript-lib-starter/commit/a752a277e5cf6884d0b80365e5bf26df2f4874a2))
+
 ## [1.2.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.2.0...v1.2.1) (2020-11-13)
 
 
