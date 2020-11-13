@@ -1,3 +1,110 @@
+## [1.2.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.2.0...v1.2.1) (2020-11-13)
+
+
+### Bug Fixes
+
+* disable not work ([8efa5fd](https://github.com/bndynet/typescript-lib-starter/commit/8efa5fdf80a95d81ccf19f1e29ad92c0dd56840d))
+
+# [1.2.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.9...v1.2.0) (2020-11-13)
+
+
+### Features
+
+* disable semantic-release publish to use npm publish ([51ec044](https://github.com/bndynet/typescript-lib-starter/commit/51ec044fa56c7483a4d8e565923f7a7c1dac2362))
+
+## [1.1.9](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.8...v1.1.9) (2020-11-13)
+
+
+### Bug Fixes
+
+* retrigger job ([dd4d25d](https://github.com/bndynet/typescript-lib-starter/commit/dd4d25dff64d529f034fdb6c4e775b5f4dacab78))
+
+## [1.1.8](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.7...v1.1.8) (2020-11-13)
+
+
+### Bug Fixes
+
+* change job name ([7c9b2b6](https://github.com/bndynet/typescript-lib-starter/commit/7c9b2b6712a92bfa7326b56ee091bf86342c1c58))
+
+## [1.1.7](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.6...v1.1.7) (2020-11-13)
+
+
+### Bug Fixes
+
+* comment npm publish code for github ([0a5234c](https://github.com/bndynet/typescript-lib-starter/commit/0a5234cd347b692d36662ee79c29db6066c34024))
+* multiple jobs to publish ([5d209c2](https://github.com/bndynet/typescript-lib-starter/commit/5d209c2c9bf09c93e40cade35e029761ac1a1d4f))
+* use semantic-release instead of official publish ([f3db174](https://github.com/bndynet/typescript-lib-starter/commit/f3db17416d853ea25e99c3f00721a0d0605e7634))
+
+## [1.1.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.5...v1.1.6) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** new node to authenticate github registry ([5d01266](https://github.com/bndynet/typescript-lib-starter/commit/5d012666cf1a2b941f250f49ad88bd42a576b827))
+
+## [1.1.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.4...v1.1.5) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** add @ prefix to scope ([675aecb](https://github.com/bndynet/typescript-lib-starter/commit/675aecb0ba854888b9c178895a8bcb1446f278a2))
+
+## [1.1.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.3...v1.1.4) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** change registry-url to try again ([bc63520](https://github.com/bndynet/typescript-lib-starter/commit/bc63520899e34785a6eea0a2992dce317a65df36))
+
+## [1.1.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.2...v1.1.3) (2020-11-12)
+
+
+### Bug Fixes
+
+* **pipeline-github:** add scope to try again ([ff73d00](https://github.com/bndynet/typescript-lib-starter/commit/ff73d0025d36d5c1a60c721f0242b465e96f96b4))
+
+## [1.1.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.1...v1.1.2) (2020-11-12)
+
+
+### Bug Fixes
+
+* try again ([0c3525b](https://github.com/bndynet/typescript-lib-starter/commit/0c3525b3d6b6e630e47e8bf83cb7ed55c83612ec))
+
+## [1.1.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.1.0...v1.1.1) (2020-11-12)
+
+
+### Bug Fixes
+
+* try again ([eb6d340](https://github.com/bndynet/typescript-lib-starter/commit/eb6d340563aedeeb4ecb263f8b99d9c8e508ae77))
+
+# [1.1.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.2...v1.1.0) (2020-11-12)
+
+
+### Bug Fixes
+
+* try to publish github ([8c59a6f](https://github.com/bndynet/typescript-lib-starter/commit/8c59a6fe6a612d857417def60b23338bc767f344))
+
+
+### Features
+
+* update document ([da3f5cc](https://github.com/bndynet/typescript-lib-starter/commit/da3f5cccaa0a13f5768e1f0ace046e940ef85de6))
+
+## [1.0.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.2...v1.0.3) (2020-11-12)
+
+
+### Bug Fixes
+
+* try to publish github ([8c59a6f](https://github.com/bndynet/typescript-lib-starter/commit/8c59a6fe6a612d857417def60b23338bc767f344))
+
+## [1.0.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.1...v1.0.2) (2020-11-12)
+
+
+### Bug Fixes
+
+* duplicated publish ([b46b68b](https://github.com/bndynet/typescript-lib-starter/commit/b46b68b0d236991838aa28bca1a626a064a8db32))
+* try to use official semantic-release instead of its action ([9156ed6](https://github.com/bndynet/typescript-lib-starter/commit/9156ed6c03f68993cbf5a7aef646a086aac17f26))
+* update semantic-release and plugins version ([299d040](https://github.com/bndynet/typescript-lib-starter/commit/299d0405ad2ca781960afe57aa7a5735f55a4ba5))
+
 ## [1.0.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.0.0...v1.0.1) (2020-11-12)
 
 
