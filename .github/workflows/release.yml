@@ -2,14 +2,13 @@ name: Release
 
 on: push
 
+env:
+  NODE_VERION: 12.x
+
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
 
     steps:
     - name: Checkout code
@@ -18,31 +17,31 @@ jobs:
         fetch-depth: 0
         persist-credentials: false
 
-    # - name: Install dependencies
-    #   run: npm install
-
-    # - name: Build package
-    #   run: |
-    #     npm run build --if-present
-
-    # - name: Semantic release to NPM
-    #   run: npx semantic-release
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ env.NODE_VERION }}
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ env.NODE_VERION }}
+        registry-url: https://registry.npmjs.org
 
     - name: Install dependencies
       run: npm install
 
     - name: Build package
       run: npm run build --if-present
-      
-    - name: Setup registry to GitHub
+
+    - name: Publish to NPM
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    # - name: Semantic release to NPM
+    #   run: npm run semantic-release
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: Set up registry for GitHub
       uses: actions/setup-node@v1
       with:
         registry-url: https://npm.pkg.github.com/
@@ -51,13 +50,3 @@ jobs:
       run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Setup registry to NPM
-      uses: actions/setup-node@v1
-      with:
-        registry-url: https://registry.npmjs.org/
-        
-    - name: Publish to GitHub
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
