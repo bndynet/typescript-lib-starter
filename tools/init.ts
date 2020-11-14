@@ -18,6 +18,7 @@ cli.questions(['Your package name:', 'Your package description:', 'Author name:'
   const pkgJson = JSON.parse(cli.readFile(path.resolve(__dirname, '..', 'package.json')));
 
   pkgJson.name = pkgName;
+  pkgJson.version = '0.0.0-dev';
   pkgJson.description = pkgDescription;
   pkgJson.main = `dist/${libName}.umd.js`;
   pkgJson.module = `dist/${libName}.es5.js`;
