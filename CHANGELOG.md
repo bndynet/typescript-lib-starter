@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.2.3...v1.3.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* update packages for support export * as ns ([8f9a87f](https://github.com/bndynet/typescript-lib-starter/commit/8f9a87f0c2e27cd7f7fabca5c85557ecf640515d))
+
+
+### Features
+
+* auto-organize imports ([404f684](https://github.com/bndynet/typescript-lib-starter/commit/404f68440022f85906cf3755af0315040fd7a1c2))
+
 ## [1.2.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.2.2...v1.2.3) (2020-11-14)
 
 
