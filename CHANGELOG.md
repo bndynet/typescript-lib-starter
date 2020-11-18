@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.3.0...v1.4.0) (2020-11-18)
+
+
+### Features
+
+* build browser support for builtin modules ([55bb69f](https://github.com/bndynet/typescript-lib-starter/commit/55bb69fe8348250bae3cb75519bc7db6c775635e))
+* only trigger action on master branch and fix copy injection issue ([7937261](https://github.com/bndynet/typescript-lib-starter/commit/793726138f017fb074c706f16d355d63db9398ce))
+
 # [1.3.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.2.3...v1.3.0) (2020-11-16)
 
 
