@@ -40,9 +40,10 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    - name: Build for publish
-      run: |
-        npm run build --if-present
+    - name: Inject version
+      uses: bndynet/github-action-inject-copyright@v1
+      with:
+        dist: dist
 
     - name: Publish to NPM
       run: npm publish

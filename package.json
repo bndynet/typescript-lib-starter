@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint ./src/**/*.ts",
     "prebuild": "rimraf dist docs",
-    "build": "tsc && rollup --config ./rollup.config.ts && npm run docs && ts-node tools/inject-copyright",
+    "build": "tsc && rollup --config ./rollup.config.ts && npm run docs",
     "docs": "typedoc --theme ./node_modules/@bndynet/typedoc-default-themes/bin/default --out docs/api --mode file",
     "test": "jest --coverage",
     "watch": "rollup --config ./rollup.config.ts -w",
