@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.4.0...v1.5.0) (2020-11-19)
+
+
+### Features
+
+* use action instead of script to inject copyright ([17f1dc4](https://github.com/bndynet/typescript-lib-starter/commit/17f1dc4d63e7960d04121a0e90dd0f5da274a9b7))
+
 # [1.4.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.3.0...v1.4.0) (2020-11-18)
 
 
