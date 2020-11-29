@@ -1,9 +1,10 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import json from '@rollup/plugin-json';
+import babel from '@rollup/plugin-babel';
+import replace from '@rollup/plugin-replace';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
-import json from 'rollup-plugin-json';
-import babel from 'rollup-plugin-babel';
 import sass from 'rollup-plugin-sass';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
@@ -34,6 +35,9 @@ export default {
     include: 'src/**',
   },
   plugins: [
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE)
+    }),
     sass({
       output: `dist/${libraryName}.css`,
       processor: css =>
@@ -55,17 +59,6 @@ export default {
     // Allow bundling cjs modules (unlike webpack, rollup doesn"t understand cjs)
     commonjs({
       include: 'node_modules/**',
-      namedExports: {
-        // "node_modules/react/index.js": [
-        //   "Component",
-        //   "PureComponent",
-        //   "Fragment",
-        //   "Children",
-        //   "cloneElement",
-        //   "createElement",
-        //   "isValidElement"
-        // ],
-      },
     }),
     // Allow node_modules resolution, so you can use "external" to control
     // which external modules to include in the bundle
