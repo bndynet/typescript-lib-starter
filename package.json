@@ -24,6 +24,7 @@
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "semantic-release": "semantic-release",
     "precommit": "lint-staged",
+    "republish": "ts-node tools/prepare-republish.ts",
     "init": "ts-node tools/init.ts"
   },
   "keywords": [
