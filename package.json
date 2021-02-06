@@ -80,7 +80,7 @@
     "jsdom-global": "^3.0.2",
     "lint-staged": "^8.1.0",
     "lite-server": "^2.5.4",
-    "node-sass": "^5.0.0",
+    "node-sass": "^8.0.0",
     "organize-imports-cli": "^0.8.0",
     "postcss": "^7.0.14",
     "prettier": "^2.1.2",
@@ -108,6 +108,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "dependencies": {}
+  }
 }
