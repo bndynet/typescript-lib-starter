@@ -32,6 +32,10 @@ cli.questions(['Your package name:', 'Your package description:', 'Author name:'
 
   cli.startSection('init project');
 
+  cli.log('prepare CHANGELOG.md ...')
+  cli.writeFile(path.resolve(__dirname, '..', 'CHANGELOG.md'), '', () => {});
+  cli.success('done');
+
   const pkgContent = JSON.stringify(pkgJson, null, 2);
   cli.log('generate package.json ...')
   cli.writeFile(path.resolve(__dirname, '..', 'package.json'), pkgContent, () => {});
