@@ -3,12 +3,12 @@ import babel from '@rollup/plugin-babel';
 import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import sourceMaps from 'rollup-plugin-sourcemaps';
-import typescript from 'rollup-plugin-typescript2';
+import sourcemaps from 'rollup-plugin-sourcemaps';
+import typescript from '@rollup/plugin-typescript';
 import sass from 'rollup-plugin-sass';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 
 const pkg = require('./package.json');
 
@@ -36,26 +36,24 @@ export default {
   },
   plugins: [
     replace({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE)
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE),
+      preventAssignment: true,
     }),
     sass({
       output: `dist/${libraryName}.css`,
-      processor: css =>
+      processor: (css) =>
         postcss([autoprefixer])
           .process(
             css,
             { from: undefined }, // fix PostCSS without `from` warning
           )
-          .then(result => result.css),
+          .then((result) => result.css),
     }),
     terser(),
     // Allow json resolution
     json(),
     // Compile TypeScript files
-    typescript({
-      tsconfig: './tsconfig.json',
-      useTsconfigDeclarationDir: true,
-    }),
+    typescript(),
     // Allow bundling cjs modules (unlike webpack, rollup doesn"t understand cjs)
     commonjs({
       include: 'node_modules/**',
@@ -68,10 +66,12 @@ export default {
     }),
 
     babel({
+      babelHelpers: 'runtime',
       exclude: 'node_modules/**',
+      plugins: ['@babel/plugin-transform-runtime']
     }),
 
     // Resolve source maps to the original source
-    sourceMaps(),
+    sourcemaps(),
   ],
 };
