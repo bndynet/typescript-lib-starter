@@ -76,7 +76,7 @@
     "jest": "^24.9.0",
     "jest-config": "^23.6.0",
     "jest-transform-stub": "^1.0.0",
-    "jsdom": "13.1.0",
+    "jsdom": "16.5.0",
     "jsdom-global": "^3.0.2",
     "lint-staged": "^8.1.0",
     "lite-server": "^2.5.4",
