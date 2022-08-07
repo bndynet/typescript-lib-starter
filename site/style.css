@@ -1,28 +1,26 @@
-html {
-  font-size: 14px;
-}
 aside {
   position: fixed;
   top: 80px;
   padding-left: 20px;
-  width: 220px;
+  width: 180px;
+}
+aside .nav-link {
+  color: var(--bs-body-color) !important;
+}
+aside .nav-link.active {
+  font-weight: bold;
+  background-color: transparent !important;
 }
 main {
   position: relative;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 56px);
   overflow-y: scroll;
-  margin-top: 60px;
-  margin-left: 220px;
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-top: 56px;
+  margin-left: 180px;
+  padding: 1.5rem 2rem 0 2rem;
 }
 main section {
-  padding-top: 15px;
-  margin-bottom: 20px;
-}
-main section h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .forkme {
@@ -32,9 +30,7 @@ main section h1 {
   z-index: 9999;
 }
 
-#changelog-body h1 {
-  margin-bottom: 0;
-}
-#changelog-body h3 {
-  margin: 0.5rem 0;
+section.markdown-body {
+  font-size: 14px;
+  margin-bottom: 2rem;
 }
