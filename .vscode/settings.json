@@ -9,5 +9,6 @@
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "liveServer.settings.root": "/docs"
 }

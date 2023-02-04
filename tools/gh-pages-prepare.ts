@@ -3,16 +3,14 @@ const sh = require('shelljs');
 
 sh.echo('⚑ gh-pages preparing...');
 
-sh.mkdir('-p', './docs');
-sh.cp('README.md', './docs/README.md');
-sh.cp('CHANGELOG.md', './docs/CHANGELOG.md');
 
-sh.rm('-rf', './docs/coverage-report');
-sh.cp('-R', './coverage/lcov-report', './docs/coverage-report');
+// copy root site
+sh.rm('-rf', './docs');
+sh.exec('npm run build --prefix site');
+sh.cp('-R', './site/dist', './docs');
 
-sh.rm('-rf', './docs/site');
-sh.cp('-R', './site', './docs/site');
-sh.cd('./docs/site');
+// replace file content 
+sh.cd('./docs');
 sh.ls('*.html').forEach((file: string) => {
   let data = fs.readFileSync(file, 'utf8');
   // remove <!-- dev --> ... <!-- /dev --> lines
@@ -25,10 +23,20 @@ sh.ls('*.html').forEach((file: string) => {
     }
   });
 });
-sh.cd('../../');
 
-sh.cd('./docs');
-fs.writeFileSync('index.html', '<script>location.href="site";</script>');
 sh.cd('../');
+
+// copy readme and changelog
+sh.mkdir('-p', './docs');
+sh.cp('README.md', './docs/README.md');
+sh.cp('CHANGELOG.md', './docs/CHANGELOG.md');
+
+// copy code coverage report
+sh.rm('-rf', './docs/coverage-report');
+sh.exec('npm test');
+sh.cp('-R', './coverage/lcov-report', './docs/coverage-report');
+
+// api documentation
+sh.exec('npm run docs');
 
 sh.echo(`✔ done at ${new Date().toISOString()}`);

@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://static.bndy.net/favicon-16x16.png" />
     <link rel="mask-icon" href="https://static.bndy.net/safari-pinned-tab.svg" color="#5bbad5" />
     <link rel="stylesheet" href="https://unpkg.com/github-markdown-css/github-markdown.css" />
-    <link rel="stylesheet" href="style.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
@@ -18,11 +17,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
     <!-- dev -->
-    <link href="../dist/typescript-lib-starter.css" rel="stylesheet" type="text/css" />
-    <script src="../dist/typescript-lib-starter.umd.js"></script>
+    <link href="typescript-lib-starter.css" rel="stylesheet" type="text/css" />
+    <script src="typescript-lib-starter.umd.js"></script>
     <!-- /dev -->
 
     <!-- prod
@@ -38,6 +35,7 @@
       <nav class="navbar fixed-top navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">typescript-lib-starter</a>
+
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -45,21 +43,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <!-- dev -->
-                <a class="nav-link text-white" href="../docs/api" target="_blank">API Documentation</a>
-                <!-- /dev -->
-                <!-- prod
-                        <a class="nav-link" href="../api" target="_blank">API Documentation</a>
-                        -->
+                <a class="nav-link text-white" href="api/" target="_blank">API Documentation</a>
               </li>
               <li class="nav-item">
-                <!-- dev -->
-                <a class="nav-link text-white" href="../coverage/lcov-report/" target="_blank">Coverage Report</a>
-                <!-- /dev -->
-
-                <!-- prod
-                        <a class="nav-link" href="../coverage-report" target="_blank">Coverage Report</a>
-                        -->
+                <a class="nav-link text-white" href="coverage-report/" target="_blank">Coverage Report</a>
               </li>
             </ul>
           </div>
@@ -94,6 +81,5 @@
         </div>
       </section>
     </main>
-    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
