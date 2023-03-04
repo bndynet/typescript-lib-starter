@@ -28,27 +28,27 @@
         -->
   </head>
   <body>
-    <a href="https://github.com/bndynet/typescript-lib-starter" class="forkme">
-      <img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" />
-    </a>
     <header>
       <nav class="navbar fixed-top navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">typescript-lib-starter</a>
+          <a id="brand" class="navbar-brand">typescript-lib-starter</a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+          <div class="collapse navbar-collapse">
+            <ul id="navbarMain" class="navbar-nav me-auto mr-auto">
               <li class="nav-item">
-                <a class="nav-link text-white" href="api/" target="_blank">API Documentation</a>
+                <a class="nav-link text-white" data-url="api/index.html">API Documentation</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="coverage-report/" target="_blank">Coverage Report</a>
+                <a class="nav-link text-white" data-url="coverage-report/index.html">Coverage Report</a>
               </li>
             </ul>
+            <a class="nav-item fs-2" href="https://github.com/bndynet/typescript-lib-starter" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
           </div>
         </div>
       </nav>

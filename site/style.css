@@ -23,11 +23,29 @@ main section {
   margin-bottom: 2rem;
 }
 
-.forkme {
+iframe {
   position: fixed;
-  right: 0;
-  top: 0;
+  top: 56px;
   z-index: 9999;
+  width: 100%;
+  border: none;
+  height: calc(100vh - 56px);
+  display: none;
+}
+body.has-iframe {
+  overflow: hidden;
+}
+body.has-iframe > aside,
+body.has-iframe > main {
+  display: none;
+}
+body.has-iframe iframe {
+  display: block;
+}
+
+#brand,
+.nav-link {
+  cursor: pointer;
 }
 
 section.markdown-body {
