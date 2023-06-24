@@ -5,6 +5,7 @@
   "main": "script.js",
   "scripts": {
     "start": "webpack serve --open",
+    "serve": "serve ./dist",
     "watch": "webpack --watch",
     "build": "webpack --env production --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,13 +14,16 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^1.4.0",
+    "mustache": "^4.2.0",
     "qiankun": "^2.10.9",
-    "showdown": "^2.1.0"
+    "showdown": "^2.1.0",
+    "zone.js": "^0.13.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "serve": "^14.2.0",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",

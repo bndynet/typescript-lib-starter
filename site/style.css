@@ -52,3 +52,7 @@ section.markdown-body {
   font-size: 14px;
   margin-bottom: 2rem;
 }
+
+#examples-nav {
+  margin-left: 18px;
+}

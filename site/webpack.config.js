@@ -1,7 +1,9 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+const mustache = require('mustache');
 
 // Try the environment variable, otherwise use root
 const ASSET_PATH = process.env.ASSET_PATH || '/';
@@ -21,12 +23,12 @@ module.exports = (env) => {
         directory: '../coverage/lcov-report',
         publicPath: '/coverage-report',
       }, {
-        directory: '../docs/api',
-        publicPath: '/api',
-      }],
-      historyApiFallback: {
-        index: '/'
-      },
+          directory: '../docs/api',
+          publicPath: '/api',
+        }],
+      devMiddleware: {
+        writeToDisk: true,
+      }
     },
     plugins: [
       // This makes it possible for us to safely use env vars on our code
@@ -44,8 +46,27 @@ module.exports = (env) => {
         patterns: [
           { from: "../README.md", to: "./" },
           { from: "../CHANGELOG.md", to: "./" },
+          { from: "./examples", to: "./examples" },
         ],
       }),
+      {
+        apply: (compiler) => {
+          compiler.hooks.done.tap('wp-examples', () => {
+            const apps = fs.readdirSync('./examples');
+            apps.forEach(app => {
+              const appPath = `/examples/${app}`;
+              const appName = appPath.replace('/', '').replace('/', '-');
+              const destAppEntry = `./dist${appPath}/entry.js`
+              if (!fs.existsSync(destAppEntry)) {
+                fs.writeFileSync(destAppEntry, mustache.render(fs.readFileSync('./tools/entry.template.js', 'utf8'), { app: appName }));
+                const indexFile = `./dist/examples/${app}/_index.html`;
+                fs.appendFileSync(indexFile, `<script src="${appPath}/entry.js" entry></script>`);
+                fs.renameSync(indexFile, indexFile.replace('_index', 'index'));
+              }
+            });
+          });
+        }
+      },
     ],
     output: {
       publicPath: ASSET_PATH,
