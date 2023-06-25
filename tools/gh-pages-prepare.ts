@@ -6,7 +6,6 @@ sh.echo('⚑ gh-pages preparing...');
 
 // copy root site
 sh.rm('-rf', './docs');
-sh.exec('npm run build --prefix site');
 sh.cp('-R', './site/dist', './docs');
 
 // replace file content 
@@ -33,10 +32,6 @@ sh.cp('CHANGELOG.md', './docs/CHANGELOG.md');
 
 // copy code coverage report
 sh.rm('-rf', './docs/coverage-report');
-sh.exec('npm test');
 sh.cp('-R', './coverage/lcov-report', './docs/coverage-report');
-
-// api documentation
-sh.exec('npm run docs');
 
 sh.echo(`✔ done at ${new Date().toISOString()}`);

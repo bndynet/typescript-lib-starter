@@ -38,6 +38,7 @@ const sectionExamples = document.querySelector('#examples');
 examples.forEach((ex) => {
   const nav = document.createElement('a');
   nav.classList.add('nav-link');
+  nav.classList.add('py-1');
   nav.href = `#${ex.name}`;
   nav.textContent = ex.title;
   navExamples.appendChild(nav);
