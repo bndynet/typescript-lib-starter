@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  NODE_VERION: 12.x
+  NODE_VERION: 18.x
 
 jobs:
   build:
