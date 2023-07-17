@@ -59,3 +59,15 @@ jobs:
       run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Prepare gh-pages...
+      run: |
+        npm run build:all
+        npm run predeploy-gh-pages
+
+    - name: Publish gh-pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: docs
+        clean: true
