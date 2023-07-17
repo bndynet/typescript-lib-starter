@@ -1,3 +1,23 @@
+## [1.6.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.0...v1.6.1) (2023-07-17)
+
+
+### Bug Fixes
+
+* gh-pages ([1e2150b](https://github.com/bndynet/typescript-lib-starter/commit/1e2150b8719708a69f100baceadce70c6ffc49ce))
+
+# [1.6.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.5.0...v1.6.0) (2023-07-17)
+
+
+### Bug Fixes
+
+* release package ([a3906c1](https://github.com/bndynet/typescript-lib-starter/commit/a3906c1d33d0016a31b3c2085e38c138e90908ae))
+
+
+### Features
+
+* update eslint ([938463a](https://github.com/bndynet/typescript-lib-starter/commit/938463ad04eee40f9cc623081bf6f0186c93c904))
+* update packages ([394bd2b](https://github.com/bndynet/typescript-lib-starter/commit/394bd2bff0b9b5e3b12e658cbc9da7541f14e200))
+
 # [1.5.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.4.0...v1.5.0) (2020-11-19)
 
 
