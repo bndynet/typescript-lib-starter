@@ -1,0 +1,42 @@
+name: gh-pages
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  NODE_VERION: 18.x
+
+jobs:
+  build:
+    name: gh-pages
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+
+    - name: Use Node.js ${{ env.NODE_VERION }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERION }}
+        registry-url: https://registry.npmjs.org
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Prepare gh-pages...
+      run: |
+        npm run build:all
+        npm run predeploy-gh-pages
+
+    - name: Publish gh-pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: docs
+        clean: true
