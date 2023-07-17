@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.0...v1.6.1) (2023-07-17)
+
+
+### Bug Fixes
+
+* gh-pages ([1e2150b](https://github.com/bndynet/typescript-lib-starter/commit/1e2150b8719708a69f100baceadce70c6ffc49ce))
+
 # [1.6.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.5.0...v1.6.0) (2023-07-17)
 
 
