@@ -8,6 +8,7 @@
     "serve": "serve ./dist",
     "watch": "webpack --watch",
     "build": "webpack --env production --progress",
+    "build:dev": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bendy Zhang",

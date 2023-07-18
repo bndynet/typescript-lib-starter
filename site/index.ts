@@ -6,12 +6,16 @@ import { examples } from './config';
 const axios = require('axios');
 const showdown = require('showdown');
 
-axios.get('../README.md').then((response: any) => {
+function getAsset(assetFile: string): string {
+  return BASE_URL ? `${BASE_URL}${assetFile}` : assetFile;
+}
+
+axios.get(getAsset('README.md')).then((response: any) => {
   var converter = new showdown.Converter();
   document.getElementById('readme').innerHTML = converter.makeHtml(response.data);
 });
 
-axios.get('../CHANGELOG.md').then((response: any) => {
+axios.get(getAsset('CHANGELOG.md')).then((response: any) => {
   var converter = new showdown.Converter();
   document.getElementById('changelog-body').innerHTML = converter.makeHtml(response.data);
 });
@@ -52,7 +56,7 @@ examples.forEach((ex) => {
 });
 
 r(
-  examples.map((ex) => ({ name: ex.name, entry: ex.path, container: `#${ex.name}`, activeRule: `` })),
+  examples.map((ex) => ({ name: ex.name, entry: (BASE_URL + ex.path).replace('//', '/'), container: `#${ex.name}`, activeRule: `` })),
   {
     beforeLoad: (app: any) => {
       console.log('before load', app.name);
