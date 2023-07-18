@@ -1,3 +1,18 @@
+## [1.6.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.2...v1.6.3) (2023-07-18)
+
+
+### Bug Fixes
+
+* gh-pages after release ([e8664ca](https://github.com/bndynet/typescript-lib-starter/commit/e8664cacbc10ef2016de32a01483e57c45aa8202))
+* serve site for start and build ([8049a96](https://github.com/bndynet/typescript-lib-starter/commit/8049a9651dff8d52ad014c90a6058284b2ffdc3b))
+
+## [1.6.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.1...v1.6.2) (2023-07-17)
+
+
+### Bug Fixes
+
+* cannot publish gh-pages ([f41ed6c](https://github.com/bndynet/typescript-lib-starter/commit/f41ed6cf7abe9cae569dd666bcaa9827be8b1f12))
+
 ## [1.6.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.0...v1.6.1) (2023-07-17)
 
 
