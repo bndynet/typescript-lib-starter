@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.7.0...v1.7.1) (2023-07-19)
+
+
+### Bug Fixes
+
+* run-name in workflow ([7914c2c](https://github.com/bndynet/typescript-lib-starter/commit/7914c2c9e288afb5a853d418a002327ef3fca80b))
+
 # [1.7.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.6...v1.7.0) (2023-07-19)
 
 
