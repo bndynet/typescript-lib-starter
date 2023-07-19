@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.5...v1.6.6) (2023-07-19)
+
+
+### Bug Fixes
+
+* docs links ([224b57c](https://github.com/bndynet/typescript-lib-starter/commit/224b57c3b08f25f88ce1f9c3683170d2ff3d0280))
+
 ## [1.6.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.4...v1.6.5) (2023-07-19)
 
 
