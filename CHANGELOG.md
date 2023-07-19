@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.3...v1.6.4) (2023-07-19)
+
+
+### Bug Fixes
+
+* remove travis ci section in readme ([091197f](https://github.com/bndynet/typescript-lib-starter/commit/091197f06bf140d49d9c03df0dee887ff998793f))
+
 ## [1.6.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.2...v1.6.3) (2023-07-18)
 
 
