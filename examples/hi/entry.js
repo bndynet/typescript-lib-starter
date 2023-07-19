@@ -1,7 +1,7 @@
-const render = ($) => {
+const render = () => {
   const lib = window['typescript-lib-starter'];
-  if (lib) {
-    $('#sum').html(lib.plus(1, 1));
+  if (lib && document.getElementById('sum')) {
+    document.getElementById('sum').innerHTML = lib.plus(1, 1);
   }
   return Promise.resolve();
 };
@@ -12,7 +12,7 @@ const render = ($) => {
       return Promise.resolve();
     },
     mount: () => {
-      return render($);
+      return render();
     },
     unmount: () => {
       return Promise.resolve();

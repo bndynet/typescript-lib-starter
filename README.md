@@ -62,12 +62,4 @@ Note: The **&lt;type&gt;** can be found in **./commitlint.config.js** file.
 
 Add **NPM_TOKEN** in your repo -> **Settings** -> **Secrets**
 
-## Travis CI Integration (Deprecated)
-
-The below steps will guide you to use Travis CI to document, release and report automatically.
-
-1. Use GitHub account to log in [Travis CI](https://travis-ci.com/), sync repos and enable your repo
-1. Set tokens(**GH_TOKEN** and **NPM_TOKEN** that can be generated at [GitHub](https://github.com/settings/tokens) and [npmjs.com](https://www.npmjs.com/settings/bndy/tokens)) in Travis CI repo to allow to release to NPM and generate gh-pages
-1. Use GitHub account to log in [coveralls.io](https://coveralls.io/), sync repos and enable your repo to allow to report testing
-
 **If you enabled GitHub Actions, the action will publish your package to GitHub Package Registry automatically.**
