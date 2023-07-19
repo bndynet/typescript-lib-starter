@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.6...v1.7.0) (2023-07-19)
+
+
+### Features
+
+* workflow ([12d79ff](https://github.com/bndynet/typescript-lib-starter/commit/12d79ffa63ac17bfaf572aa3681435ab382afe97))
+
 ## [1.6.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.5...v1.6.6) (2023-07-19)
 
 
