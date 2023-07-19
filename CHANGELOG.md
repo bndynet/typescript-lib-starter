@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.4...v1.6.5) (2023-07-19)
+
+
+### Bug Fixes
+
+* remove unused files ([83d1be6](https://github.com/bndynet/typescript-lib-starter/commit/83d1be68dc95a1f17f52a59b5563a8e440578e3e))
+
 ## [1.6.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.6.3...v1.6.4) (2023-07-19)
 
 
