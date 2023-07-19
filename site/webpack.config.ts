@@ -5,13 +5,31 @@ import webpack from 'webpack';
 import { render } from 'mustache';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
-import { name, version } from '../package.json';
+import { name, version, description } from '../package.json';
 import { examples } from './config';
+
+
+const htmlFiles = ['index.html', 'md.html', 'components.html', 'api.html'];
 
 const config = (env: any) => { 
   const baseUrl = env.production 
     ? `/${name.includes('/') ? name.split('/')[1] : name }/`  // '/docs/'
     : '/';
+
+  const htmlWebpackPlugins = htmlFiles.map(file => {
+    return new HtmlWebpackPlugin({
+      title: name,
+      base: baseUrl,
+      template: file,
+      filename: file,
+
+      org: name.includes('/') ? name.split('/')[0]: '',
+      name: name.includes('/') ? name.split('/')[1]: name,
+      version: `v${version}`,
+      description: description,
+    });
+  });
+
   return ({
     mode: 'development',
     entry: './index.ts',
@@ -41,16 +59,14 @@ const config = (env: any) => {
         VERSION: JSON.stringify(version),
         BASE_URL: JSON.stringify(baseUrl),
       }),
-      new HtmlWebpackPlugin({
-        template: 'index.html',
-        title: `${name} - v${version}`,
-        base: baseUrl,
-      }),
+      ...htmlWebpackPlugins,
       new CopyPlugin({
         patterns: [
           { from: '../README.md', to: './' },
           { from: '../CHANGELOG.md', to: './' },
           { from: './examples', to: './examples' },
+          { from: './assets', to: './assets' },
+          { from: './partial', to: './partial' },
         ],
       }),
       {
@@ -63,9 +79,11 @@ const config = (env: any) => {
               const destIndexTempFile = `./dist/${appPath}/_index.html`;
               const destIndexFile = destIndexTempFile.replace('_index', 'index');
               if (fs.existsSync(`./${appPath}/_index.html`)) {
-                fs.writeFileSync(destAppEntry, render(fs.readFileSync('./tools/entry.template.js', 'utf8'), { app: appName }));
+                fs.writeFileSync(destAppEntry, render(fs.readFileSync('./tools/entry.template.js', 'utf-8'), { app: appName }));
                 const entryPath = `${baseUrl}${appPath}/entry.js`.replace(/\/+/g, '/');
-                fs.appendFileSync(destIndexTempFile, `<script src="${entryPath}" entry></script>`);
+
+                const indexFileContent = fs.readFileSync(`./${appPath}/_index.html`, 'utf-8');
+                fs.writeFileSync(destIndexTempFile, indexFileContent + `\n\n<script src="${entryPath}" entry></script>`);
                 fs.renameSync(destIndexTempFile, destIndexFile);
               }
             });
