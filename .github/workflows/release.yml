@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+      - main
+      
+run-name: build #${{ inputs.build_id }} by @${{ github.actor }}
 
 env:
   NODE_VERION: 18.x
