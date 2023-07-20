@@ -9,8 +9,6 @@ on:
 run-name: release by @${{ github.actor }}
 
 permissions:
-  contents: read
-  pages: write
   id-token: write
 
 env:
