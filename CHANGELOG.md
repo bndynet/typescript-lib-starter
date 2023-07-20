@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.2...v1.8.3) (2023-07-20)
+
+
+### Bug Fixes
+
+* can not deploy to GitHub Pages ([ce1f291](https://github.com/bndynet/typescript-lib-starter/commit/ce1f2917d64eedf3e92d43a260883ae6e4a425d5))
+
 ## [1.8.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.1...v1.8.2) (2023-07-20)
 
 
