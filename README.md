@@ -4,6 +4,7 @@
 [![npm](https://img.shields.io/npm/v/@bndynet/typescript-lib-starter?style=flat-square)](https://www.npmjs.com/package/@bndynet/typescript-lib-starter)
 [![Coverage Status](https://img.shields.io/coverallsCoverage/github/bndynet/typescript-lib-starter?branch=master&style=flat-square)](https://coveralls.io/github/bndynet/typescript-lib-starter?branch=master)
 [![Code Styles](https://img.shields.io/badge/Code_Style-Prettier-ff69b4?style=flat-square)](https://github.com/prettier/prettier)
+[![semver](https://img.shields.io/badge/semver-2.0.0-blue?style=flat-square)](https://semver.org/)
 
 This starter project will standardize coding and publishing for your library, and implements following features:
 
