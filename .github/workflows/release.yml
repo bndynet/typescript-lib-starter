@@ -8,9 +8,6 @@ on:
       
 run-name: release by @${{ github.actor }}
 
-permissions:
-  id-token: write
-
 env:
   NODE_VERION: 18.x
 
