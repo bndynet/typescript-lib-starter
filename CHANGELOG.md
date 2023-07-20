@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.7.1...v1.8.0) (2023-07-20)
+
+
+### Features
+
+* use actions@deploy-pages ([1622428](https://github.com/bndynet/typescript-lib-starter/commit/162242829e3433c94910ea41758c48cae54de916))
+
 ## [1.7.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.7.0...v1.7.1) (2023-07-19)
 
 
