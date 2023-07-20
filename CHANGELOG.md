@@ -1,3 +1,10 @@
+## [1.8.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.4...v1.8.5) (2023-07-20)
+
+
+### Bug Fixes
+
+* cannot publish github pages ([e887181](https://github.com/bndynet/typescript-lib-starter/commit/e887181d4e9ad64ecc1c3cb7fb34274df7cd5081))
+
 ## [1.8.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.3...v1.8.4) (2023-07-20)
 
 
