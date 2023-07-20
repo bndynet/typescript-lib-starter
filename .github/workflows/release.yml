@@ -9,7 +9,7 @@ on:
 run-name: release by @${{ github.actor }}
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
