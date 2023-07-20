@@ -1,3 +1,10 @@
+## [1.8.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.5...v1.8.6) (2023-07-20)
+
+
+### Bug Fixes
+
+* can not publish package ([96be52d](https://github.com/bndynet/typescript-lib-starter/commit/96be52d1b439d4ed9fe6fee3e67a1451bf3068fc))
+
 ## [1.8.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.4...v1.8.5) (2023-07-20)
 
 
