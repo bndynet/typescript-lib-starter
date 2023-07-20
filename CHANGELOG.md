@@ -1,3 +1,10 @@
+## [1.8.7](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.6...v1.8.7) (2023-07-20)
+
+
+### Bug Fixes
+
+* add semver badge ([d5bae0a](https://github.com/bndynet/typescript-lib-starter/commit/d5bae0ae8bb75129083feddfc7d0b342389bbd79))
+
 ## [1.8.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.5...v1.8.6) (2023-07-20)
 
 
