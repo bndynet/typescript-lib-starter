@@ -1,3 +1,10 @@
+## [1.8.8](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.7...v1.8.8) (2023-07-21)
+
+
+### Bug Fixes
+
+* the api doc is missing ([b90e54a](https://github.com/bndynet/typescript-lib-starter/commit/b90e54a12673cff44811bdb4cc09c0c8c816b1b9))
+
 ## [1.8.7](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.6...v1.8.7) (2023-07-20)
 
 
