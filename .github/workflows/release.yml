@@ -1,12 +1,10 @@
-name: release
+name: Release
 
 on:
   push:
     branches:
       - master
       - main
-      
-run-name: release by @${{ github.actor }}
 
 permissions:
   pages: write
