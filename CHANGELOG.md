@@ -1,3 +1,10 @@
+## [1.8.11](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.10...v1.8.11) (2023-07-21)
+
+
+### Bug Fixes
+
+* add missing package ([de22540](https://github.com/bndynet/typescript-lib-starter/commit/de22540ae407b6466d0283124ac34d4810ef7850))
+
 ## [1.8.10](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.9...v1.8.10) (2023-07-21)
 
 
