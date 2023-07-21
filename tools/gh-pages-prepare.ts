@@ -5,7 +5,6 @@ sh.echo('⚑ gh-pages preparing...');
 
 
 // copy root site
-sh.rm('-rf', './docs');
 sh.cp('-R', './site/dist', './docs');
 
 // replace file content 
