@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.11...v1.9.0) (2023-07-24)
+
+
+### Features
+
+* mannually trigger release workflow ([397190c](https://github.com/bndynet/typescript-lib-starter/commit/397190c7785bc2a60159925d4ce28af1ab61e203))
+
 ## [1.8.11](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.10...v1.8.11) (2023-07-21)
 
 
