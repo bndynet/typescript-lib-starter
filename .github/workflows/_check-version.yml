@@ -1,7 +1,11 @@
 name: Check version
 
-on: 
+on:
   workflow_call:
+    outputs:
+      NEXT_RELEASE_VERSION:
+        description: 'The next version. That means no version to be released if empty.'
+        value: ${{ jobs.check.outputs.NEXT_RELEASE_VERSION }}
 
 jobs:
   check:
@@ -27,6 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Print outputs
-        run: echo ${{ steps.chkVersion.outputs.NEXT_RELEASE_VERSION }}
-
+      - name: Print next version
+        run: |
+          echo ${{ steps.chkVersion.outputs.NEXT_RELEASE_VERSION }}
+          echo ${{ steps.chkVersion.outputs.NEXT_RELEASE_VERSION }} >> $GITHUB_STEP_SUMMARY

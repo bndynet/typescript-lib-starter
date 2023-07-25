@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-version
     steps:
-      - run: echo ${{needs.check-version.outputs.NEXT_RELEASE_VERSION}}
+      - run: echo ${{ needs.check-version.outputs.NEXT_RELEASE_VERSION }}
 
   build:
     uses: ./.github/workflows/_build.yml
