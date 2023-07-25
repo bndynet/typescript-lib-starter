@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.1...v1.10.2) (2023-07-25)
+
+
+### Bug Fixes
+
+* **ci:** cannot get outputs about version ([a924905](https://github.com/bndynet/typescript-lib-starter/commit/a924905d947768206d0a73025147e04e04472327))
+
 ## [1.10.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.0...v1.10.1) (2023-07-25)
 
 
