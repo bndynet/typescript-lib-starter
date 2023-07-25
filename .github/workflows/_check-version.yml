@@ -27,3 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Print outputs
+        run: echo ${{ steps.chkVersion.outputs.NEXT_RELEASE_VERSION }}
+
