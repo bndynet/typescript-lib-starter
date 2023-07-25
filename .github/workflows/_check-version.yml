@@ -34,4 +34,4 @@ jobs:
       - name: Print next version
         run: |
           echo ${{ steps.chkVersion.outputs.NEXT_RELEASE_VERSION }}
-          echo "The next version is v${{ steps.chkVersion.outputs.NEXT_RELEASE_VERSION }}" >> $GITHUB_STEP_SUMMARY
+          echo "The next version is v${{ steps.chkVersion.outputs.NEXT_RELEASE_VERSION && steps.chkVersion.outputs.NEXT_RELEASE_VERSION || '-.-.-' }}" >> $GITHUB_STEP_SUMMARY
