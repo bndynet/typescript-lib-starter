@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.2...v1.10.3) (2023-07-25)
+
+
+### Bug Fixes
+
+* **ci:** step summary and some names ([3ee54d5](https://github.com/bndynet/typescript-lib-starter/commit/3ee54d5730f7eea0ecffe946f9e72b0e47deb98e))
+
 ## [1.10.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.1...v1.10.2) (2023-07-25)
 
 
