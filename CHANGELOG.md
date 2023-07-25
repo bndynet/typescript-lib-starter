@@ -1,3 +1,16 @@
+# [1.10.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.9.0...v1.10.0) (2023-07-25)
+
+
+### Bug Fixes
+
+* **ci:** deploy cannot be triggered ([c94c8ee](https://github.com/bndynet/typescript-lib-starter/commit/c94c8ee800268ad2f572bf2597fb38313eaefbd2))
+* **ci:** deploy cannot be triggered ([9b753e5](https://github.com/bndynet/typescript-lib-starter/commit/9b753e55ec46839aad9502fc8de01ee39b6fef12))
+
+
+### Features
+
+* **ci:** split workflow ([d16b67c](https://github.com/bndynet/typescript-lib-starter/commit/d16b67cd890b1b458eb9c3944e2e8b63070ff5b2))
+
 # [1.9.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.8.11...v1.9.0) (2023-07-24)
 
 
