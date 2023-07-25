@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.0...v1.10.1) (2023-07-25)
+
+
+### Bug Fixes
+
+* **ci:** print outputs ([d1800a8](https://github.com/bndynet/typescript-lib-starter/commit/d1800a8b455d694304ca26bcb28445d43944e34f))
+
 # [1.10.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.9.0...v1.10.0) (2023-07-25)
 
 
