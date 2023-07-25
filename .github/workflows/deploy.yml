@@ -1,11 +1,10 @@
-name: Deploy
+name: Deploy site
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: [Release]
-    branches: [main, master]
-    types:
-      - completed
+    types: [completed]
 
 permissions:
   pages: write
