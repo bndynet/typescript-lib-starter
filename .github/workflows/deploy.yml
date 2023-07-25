@@ -10,9 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-env:
-  NODE_VERION: 18.x
-
 jobs:
   build-site:
     uses: ./.github/workflows/_build-site.yml

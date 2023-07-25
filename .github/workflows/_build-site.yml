@@ -1,4 +1,4 @@
-name: Build
+name: _build-site
 
 on: 
   workflow_call:
