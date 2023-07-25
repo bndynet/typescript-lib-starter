@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [Release]
+    types:
+      - completed
+
+permissions:
+  pages: write
+  id-token: write
+
+env:
+  NODE_VERION: 18.x
+
+jobs:
+  build:
+    uses: ./.github/workflows/_build-site.yml
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download site
+        uses: actions/cache/restore@v3
+        with:
+          path: ./docs
+          key: docs
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

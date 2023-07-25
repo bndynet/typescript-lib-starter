@@ -1,9 +1,9 @@
-name: Release & Deploy Site
+name: Release
 
 on:
   workflow_dispatch:
     inputs:
-      logLevel: 
+      logLevel:
         required: true
         default: 'warning'
   push:
@@ -12,10 +12,8 @@ on:
       - main
 
 permissions:
-  pages: write
   issues: write
   contents: write
-  id-token: write
   packages: write
   pull-requests: write
 
@@ -23,51 +21,33 @@ env:
   NODE_VERION: 18.x
 
 jobs:
+  check-version:
+    uses: ./.github/workflows/_check-version.yml
+
+  build:
+    uses: ./.github/workflows/_build.yml
+    needs: check-version
+    if: ${{ needs.check-version.outputs.NEXT_RELEASE_VERSION != '' }}
+
   release:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
-
+    needs: [check-version, build]
+    if: ${{ needs.check-version.outputs.NEXT_RELEASE_VERSION != '' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Download dist
+        uses: actions/cache/restore@v3
         with:
-          fetch-depth: 0
-          persist-credentials: false
+          path: ./dist
+          key: dist
 
       - name: Use Node.js ${{ env.NODE_VERION }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERION }}
           registry-url: https://registry.npmjs.org
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Test and Build
-        run: |
-          npm run test:prod
-          npm run build --if-present
-
-      - name: Check version
-        run: npm run semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Nothing to release
-        if: ${{ env.NEXT_RELEASE_VERSION == '' }}
-        uses: actions/github-script@v6
-        with:
-          script: |
-            core.setFailed('Nothing to release')
-
-      - name: Inject version
-        uses: bndynet/github-action-inject-copyright@v1
-        with:
-          dist: dist
 
       - name: Publish to NPM
         run: npm publish
@@ -83,33 +63,3 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Prepare site
-        run: |
-          npm run build:all
-          npm run predeploy-gh-pages
-
-      # require following steps if cross jobs
-      #- name: Archive site
-      #  uses: actions/upload-artifact@v3
-      #  with:
-      #    name: site
-      #    path: docs 
-
-      #- name: Download site
-      #  uses: actions/download-artifact@v3
-      #  with:
-      #    name: site
-      #    path: docs
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: docs
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
