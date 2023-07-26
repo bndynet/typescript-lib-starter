@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.3...v1.11.0) (2023-07-26)
+
+
+### Features
+
+* notification ([009d79e](https://github.com/bndynet/typescript-lib-starter/commit/009d79ed7c21b18ecf515a95df8548d22b9caf91))
+
 ## [1.10.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.2...v1.10.3) (2023-07-25)
 
 
