@@ -33,4 +33,8 @@ sh.cp('CHANGELOG.md', './docs/CHANGELOG.md');
 sh.rm('-rf', './docs/coverage-report');
 sh.cp('-R', './coverage/lcov-report', './docs/coverage-report');
 
+// copy dist files
+sh.cp('-R', './dist/*', './docs');
+
+
 sh.echo(`✔ done at ${new Date().toISOString()}`);

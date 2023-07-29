@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^1.4.0",
+    "js-htmlencode": "^0.3.0",
     "mustache": "^4.2.0",
     "qiankun": "^2.10.9",
     "showdown": "^2.1.0",
@@ -27,12 +28,14 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2",
     "serve": "^14.2.0",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.4.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
-    "webpack": "^5.87.0",
+    "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   }

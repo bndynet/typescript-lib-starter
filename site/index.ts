@@ -1,7 +1,8 @@
-import './style.css';
+import './style.scss';
 import 'zone.js/dist/zone';
 import { addGlobalUncaughtErrorHandler, registerMicroApps as r, start as s } from 'qiankun';
 import { examples } from './config';
+import { htmlEncode } from 'js-htmlencode';
 
 const axios = require('axios');
 const showdown = require('showdown');
@@ -14,16 +15,26 @@ function includeHTML() {
   for (i = 0; i < z.length; i++) {
     elmnt = z[i] as HTMLElement;
     /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
+    file = elmnt.getAttribute("w3-include-file");
+    const asCode = elmnt.getAttribute("w3-html-encode") === ''; 
     if (file) {
+      // set loading
+      if (asCode) {
+        const loadingHtml = `<div class="spinner-border text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span></div>`;
+        elmnt.innerHTML = loadingHtml;
+      }
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 200) {
+            elmnt.innerHTML = asCode ? htmlEncode(this.responseText) : this.responseText;
+            hljs?.highlightAll();
+          }
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
           /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("w3-include-html");
+          elmnt.removeAttribute("w3-include-file");
           includeHTML();
         }
       }
@@ -45,8 +56,25 @@ function getQueryValue(key: string): string {
   return qs.find(q => q.toLowerCase().startsWith(key.toLowerCase()))?.split('=')[1] || '';
 }
 
+if (!location.pathname.endsWith('.html') || location.pathname.indexOf('index.html') > 0) {
+  // home page
+  document.querySelectorAll('.typewriter').forEach(ele => {
+    const text = ele.textContent;
+    new Typewriter(ele, {
+      loop: false,
+      cursor: '_',
+      delay: 75,
+    })
+    .typeString(text.trim())
+    .pauseFor(500)
+    .start();
+  });
+}
+
 if (location.pathname.indexOf('md.html') > 0) {
+  // md page
   document.getElementById('nav-title').innerHTML = decodeURI(getQueryValue('title'));
+  document.body.classList.add(`body-${getQueryValue('theme') || 'primary'}`);
   const md = getQueryValue('file');
   if (md) {
     axios.get(getAsset(md)).then((response: any) => {
@@ -114,3 +142,4 @@ if (location.pathname.indexOf('components.html') > 0) {
     s({ prefetch: 'all', singular: false });
   }, 1000);
 }
+

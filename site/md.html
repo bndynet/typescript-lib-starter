@@ -15,16 +15,19 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
     <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
       
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github.min.css" />
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
     
 </head> 
 
-<body class="body-green">
+<body>
     <div class="page-wrapper">
         <!-- ******Header****** -->
         <header id="header" class="header">
@@ -57,16 +60,17 @@
         
     </div><!--//page-wrapper-->
     
-    <div w3-include-html="partial/footer.html"></div>
+    <div w3-include-file="partial/footer.html"></div>
      
     <!-- Main Javascript -->          
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/prism/prism.js"></script>      
     <script src="assets/plugins/stickyfill/stickyfill.min.js"></script>      
     <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
     <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>                                                          
     <script src="assets/js/main.js"></script>
-    
+    <script>
+        hljs.highlightAll();
+    </script>
 </body>
 </html> 
 
