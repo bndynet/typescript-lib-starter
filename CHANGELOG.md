@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.12.0...v1.12.1) (2023-07-31)
+
+
+### Bug Fixes
+
+* **ci:** cache version ([89a268f](https://github.com/bndynet/typescript-lib-starter/commit/89a268f538fa3dcbb158efe89db35525c37c7457))
+
 # [1.12.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.11.0...v1.12.0) (2023-07-31)
 
 
