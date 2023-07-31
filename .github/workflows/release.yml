@@ -48,7 +48,7 @@ jobs:
         uses: actions/cache/restore@v3
         with:
           path: ./dist
-          key: dist
+          key: dist-${{ needs.check-version.outputs.NEXT_RELEASE_VERSION }}
 
       - name: Use Node.js ${{ env.NODE_VERION }}
         uses: actions/setup-node@v3
