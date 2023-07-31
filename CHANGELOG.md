@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.11.0...v1.12.0) (2023-07-31)
+
+
+### Features
+
+* refine site ([7d14828](https://github.com/bndynet/typescript-lib-starter/commit/7d14828ddbfd098f555cb19e44adf2465b8ade79))
+
 # [1.11.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.10.3...v1.11.0) (2023-07-26)
 
 
