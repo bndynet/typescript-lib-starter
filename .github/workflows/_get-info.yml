@@ -26,3 +26,7 @@ jobs:
         id: version
         with:
           cmd: 'jq .version package.json -r'
+          
+      - name: Print current version
+        run: |
+          echo "current version: ${{ steps.version.outputs.value }}"
