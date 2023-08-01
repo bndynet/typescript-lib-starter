@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.13.2...v1.13.3) (2023-08-01)
+
+
+### Bug Fixes
+
+* **ci:** optimize deploy workflow ([d572b84](https://github.com/bndynet/typescript-lib-starter/commit/d572b844dbf1ae1c42262c6388f2e6f64eb37232))
+
 ## [1.13.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.13.1...v1.13.2) (2023-08-01)
 
 
