@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.13.1...v1.13.2) (2023-08-01)
+
+
+### Bug Fixes
+
+* **ci:** update all checkout steps for getting latest code ([573f442](https://github.com/bndynet/typescript-lib-starter/commit/573f44295bbd8657e012486c9afcd58b3e077c6b))
+
 ## [1.13.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.13.0...v1.13.1) (2023-08-01)
 
 
