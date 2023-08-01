@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.13.0...v1.13.1) (2023-08-01)
+
+
+### Bug Fixes
+
+* **ci:** can not get latest version code about changelog ([080a83c](https://github.com/bndynet/typescript-lib-starter/commit/080a83c5e9e11b98d4a2bfa07074e33fd6a3652b))
+
 # [1.13.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.12.1...v1.13.0) (2023-08-01)
 
 
