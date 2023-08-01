@@ -11,9 +11,6 @@ permissions:
   id-token: write
 
 jobs:
-  get-info:
-    uses: ./.github/workflows/_get-info.yml
-
   build-site:
     uses: ./.github/workflows/_build-site.yml
 
@@ -22,13 +19,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: [get-info, build-site]
+    needs: build-site
     steps:
       - name: Download site
         uses: actions/cache/restore@v3
         with:
           path: ./docs
-          key: docs-${{ needs.get-info.outputs.version }}
+          key: docs-${{ needs.build-site.outputs.version }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
