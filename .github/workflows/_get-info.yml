@@ -20,6 +20,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+          ref: ${{ github.ref }}
 
       - name: Get version from package.json
         uses: sergeysova/jq-action@v2
