@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.12.1...v1.13.0) (2023-08-01)
+
+
+### Features
+
+* print the current version ([f49d61d](https://github.com/bndynet/typescript-lib-starter/commit/f49d61db59e18cfea39f18ca054a8948c9997683))
+
 ## [1.12.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.12.0...v1.12.1) (2023-07-31)
 
 
