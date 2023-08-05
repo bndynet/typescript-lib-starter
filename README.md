@@ -5,7 +5,7 @@
 [![Coverage Status](https://img.shields.io/coverallsCoverage/github/bndynet/typescript-lib-starter?branch=master&style=flat-square)](https://coveralls.io/github/bndynet/typescript-lib-starter?branch=master)
 [![semver](https://img.shields.io/badge/semver-2.0.0-blue?style=flat-square)](https://semver.org/)
 [![Code Styles](https://img.shields.io/badge/Code_Style-Prettier-ff69b4?style=flat-square)](https://github.com/prettier/prettier)
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=flat-square)]()
+![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=flat-square)
 
 This starter project will standardize coding and publishing for your library, and implements following features:
 
@@ -13,10 +13,10 @@ This starter project will standardize coding and publishing for your library, an
 - :art: Compile sass to css using node-sass, autoprefixer and postcss
 - :inbox_tray: Build library to UMD and CommonJS modules
 - :blue_book: Generate API documentation of your TypeScript files automatically
-- :heavy_check_mark: Check your commit message when `git commit ...`
+- :100: Check your commit message when `git commit ...`
 - :cl: Default CI scripts for GitHub Action, includes release and publish automatically
 - :bookmark: Generate CHANGELOG.md according to your commits in CI publishing process
-- :book: Publish your unit tests report to [coveralls.io](https://coveralls.io/) by CI
+- :test_tube: Publish your unit tests report to [coveralls.io](https://coveralls.io/) by CI
 - :earth_asia: Publish API documentation, converage, demo and changelog to your gh-pages branch as your project site by CI
 - :package: Release to NPM and GitHub Package automatically by CI
 

@@ -98,7 +98,7 @@ const config = (env: any) => {
       clean: true,
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js', '.json'],
     },
     optimization: {
       splitChunks: {

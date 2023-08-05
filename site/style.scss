@@ -105,10 +105,17 @@ pre code {
   border-radius: 5px;
 }
 
-.api-page .container {
-  max-width: 1700px !important;
-  padding: 0 32px;
-  box-sizing: content-box;
+.page-api .container {
+  margin: 0 2rem;
+}
+
+.page-components {
+  .doc-sidebar {
+    width: 240px;
+  }
+  .doc-content {
+    flex: 1;
+  }
 }
 
 #file-content h1 {
@@ -137,7 +144,7 @@ pre code {
 
 /* window styles */
 .outer {
-  background: #b4b4b4;
+  background: #e4e4e4;
   opacity: 0.9;
   margin: 0 auto;
   padding: 10px;

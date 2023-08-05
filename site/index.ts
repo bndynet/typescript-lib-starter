@@ -1,5 +1,6 @@
 import './style.scss';
 import 'zone.js/dist/zone';
+import * as emoji from 'node-emoji';
 import { addGlobalUncaughtErrorHandler, registerMicroApps as r, start as s } from 'qiankun';
 import { examples } from './config';
 import { htmlEncode } from 'js-htmlencode';
@@ -81,7 +82,7 @@ if (location.pathname.indexOf('md.html') > 0) {
       var converter = new showdown.Converter();
       const elem = document.getElementById('file-content');
       if (elem) {
-        elem.innerHTML = converter.makeHtml(response.data);
+        elem.innerHTML = emoji.emojify(converter.makeHtml(response.data));
       }
     }); 
   }

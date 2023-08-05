@@ -17,6 +17,7 @@
     "axios": "^1.4.0",
     "js-htmlencode": "^0.3.0",
     "mustache": "^4.2.0",
+    "node-emoji": "^2.1.0",
     "qiankun": "^2.10.9",
     "showdown": "^2.1.0",
     "zone.js": "^0.13.1"
