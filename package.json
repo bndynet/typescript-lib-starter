@@ -1,6 +1,6 @@
 {
   "name": "@bndynet/typescript-lib-starter",
-  "version": "1.13.4",
+  "version": "1.14.0",
   "description": "A starter project for creating your typescript library",
   "main": "dist/typescript-lib-starter.umd.js",
   "module": "dist/typescript-lib-starter.es5.js",

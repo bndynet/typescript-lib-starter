@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.13.4...v1.14.0) (2023-08-17)
+
+
+### Features
+
+* show the changelog in GITHUB_STEP_SUMMARY ([79290ac](https://github.com/bndynet/typescript-lib-starter/commit/79290ac09adb61b28341b51dc2da301d0f764aa8))
+
 ## [1.13.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.13.3...v1.13.4) (2023-08-17)
 
 
