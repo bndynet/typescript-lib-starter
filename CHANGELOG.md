@@ -1,3 +1,10 @@
+## [1.14.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.3...v1.14.4) (2023-08-17)
+
+
+### Bug Fixes
+
+* ci script error ([8b8409f](https://github.com/bndynet/typescript-lib-starter/commit/8b8409f96f8dc22129c233a21f80fd4a1f189d0e))
+
 ## [1.14.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.2...v1.14.3) (2023-08-17)
 
 
