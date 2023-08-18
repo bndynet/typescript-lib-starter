@@ -32,7 +32,7 @@
       "@semantic-release/exec",
       {
         "verifyReleaseCmd": "echo \"NEXT_RELEASE_VERSION=${nextRelease.version}\" >> $GITHUB_OUTPUT",
-        "generateNotesCmd": "<% print('echo \"NEXT_RELEASE_CHANGELOG=' + (nextRelease.notes || '').replaceAll('\\n', '%0A').replaceAll('\\r', '%0D').replaceAll('%', '%25') + '\" >> $GITHUB_OUTPUT') %>"
+        "successCmd": "<% print('echo \"NEXT_RELEASE_CHANGELOG=' + (nextRelease.notes || '').replaceAll('\\n', '%0A').replaceAll('\\r', '%0D').replaceAll('%', '%25') + '\" >> $GITHUB_OUTPUT') %>"
       }
     ],
     [
