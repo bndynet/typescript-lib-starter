@@ -1,3 +1,10 @@
+## [1.14.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.5...v1.14.6) (2023-08-18)
+
+
+### Bug Fixes
+
+* cmd run twice ([2fa4605](https://github.com/bndynet/typescript-lib-starter/commit/2fa460577d3a17b2ad94bdee3285022431022132))
+
 ## [1.14.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.4...v1.14.5) (2023-08-18)
 
 
