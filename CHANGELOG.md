@@ -1,3 +1,10 @@
+## [1.14.5](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.4...v1.14.5) (2023-08-18)
+
+
+### Bug Fixes
+
+* message body about changelog ([59afcec](https://github.com/bndynet/typescript-lib-starter/commit/59afcece24540522dcf5a48c226f33dd448c17e5))
+
 ## [1.14.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.3...v1.14.4) (2023-08-17)
 
 
