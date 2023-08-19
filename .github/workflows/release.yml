@@ -86,4 +86,4 @@ jobs:
           message: "${{ github.repository }} v${{ needs.check-version.outputs.NEXT_RELEASE_VERSION }} has been released"
 
       - run: |
-          echo "v${{ needs.check-version.outputs.NEXT_RELEASE_VERSION }} released" >> $GITHUB_STEP_SUMMARY
+          echo "${{ needs.check-version.outputs.NEXT_RELEASE_CHANGELOG }}" >> $GITHUB_STEP_SUMMARY
