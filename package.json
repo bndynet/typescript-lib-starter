@@ -24,6 +24,7 @@
     "deploy-gh-pages": "npm run predeploy-gh-pages && ts-node tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "semantic-release": "semantic-release",
+    "sr": "semantic-release --dry-run",
     "precommit": "lint-staged",
     "republish": "ts-node tools/prepare-republish.ts",
     "init": "ts-node tools/init.ts"
