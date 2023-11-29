@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.6...v1.15.0) (2023-11-29)
+
+
+### Features
+
+* Update release.yml ([52ffe19](https://github.com/bndynet/typescript-lib-starter/commit/52ffe196a9dcb3fcd8250615b7e2a499e4d9c67b))
+
 ## [1.14.6](https://github.com/bndynet/typescript-lib-starter/compare/v1.14.5...v1.14.6) (2023-08-18)
 
 
