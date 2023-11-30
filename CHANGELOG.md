@@ -1,3 +1,11 @@
+## [1.15.2](https://github.com/bndynet/typescript-lib-starter/compare/v1.15.1...v1.15.2) (2023-11-30)
+
+
+### Bug Fixes
+
+* **test:** can not show multiple lines changelog ([8359460](https://github.com/bndynet/typescript-lib-starter/commit/835946029822b54812d48d6aec4ee16ac4c2e1bc))
+* **test:** can not show multiple lines changelog ([046364e](https://github.com/bndynet/typescript-lib-starter/commit/046364e7ddafed102e66d84ac52ec3f3a8cafa4e))
+
 ## [1.15.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.15.0...v1.15.1) (2023-11-30)
 
 
