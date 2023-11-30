@@ -79,7 +79,7 @@ jobs:
           result-encoding: string
           script: |
             const encodedChangelog = '${{ needs.check-version.outputs.NEXT_RELEASE_CHANGELOG }}'
-            return encodedChangelog.replaceAll('%25', '%').replaceAll('%0D', '\r').replaceAll('%0A', '\n').replaceAll(/#\s\[/g, '## [v')
+            return encodedChangelog.replaceAll('%25', '%').replaceAll('%0D', '\r').replaceAll('%0A', '\n').replaceAll(/#\s\[/g, '## [')
           
       - name: Send notification
         uses: bndynet/github-action-webex@v1
