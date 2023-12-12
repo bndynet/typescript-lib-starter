@@ -1,3 +1,10 @@
+## [1.15.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.15.3...v1.15.4) (2023-12-12)
+
+
+### Bug Fixes
+
+* Update release.yml for skipping release if failed to build ([d75a58e](https://github.com/bndynet/typescript-lib-starter/commit/d75a58e2d46ab0cad14b7d26239ac3d2b6a0c66a))
+
 ## [1.15.3](https://github.com/bndynet/typescript-lib-starter/compare/v1.15.2...v1.15.3) (2023-11-30)
 
 
