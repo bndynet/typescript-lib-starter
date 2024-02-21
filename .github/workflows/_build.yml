@@ -38,7 +38,7 @@ jobs:
         run: npm run build --if-present
 
       - name: Inject version
-        uses: bndynet/github-action-inject-copyright@v1
+        uses: bndynet/github-action-inject-copyright@v2
         with:
           dist: dist
 
