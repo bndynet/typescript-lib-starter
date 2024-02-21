@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.16.0...v1.16.1) (2024-02-21)
+
+
+### Bug Fixes
+
+* upgrade actions ([830763e](https://github.com/bndynet/typescript-lib-starter/commit/830763e5b2aa27e4e1baa52b93936fd60176f969))
+
 # [1.16.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.15.4...v1.16.0) (2024-02-21)
 
 
