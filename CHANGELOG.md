@@ -1,3 +1,16 @@
+# [1.16.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.15.4...v1.16.0) (2024-02-21)
+
+
+### Bug Fixes
+
+* upgrade actions ([cc0dc87](https://github.com/bndynet/typescript-lib-starter/commit/cc0dc8783f0467d7a15862ebfe7344a6f5bbf53c))
+
+
+### Features
+
+* disable auto release ([da14319](https://github.com/bndynet/typescript-lib-starter/commit/da143199247beff82ce6cdca586b86f74ce28885))
+* use sass instead of node-sass ([92d0ad8](https://github.com/bndynet/typescript-lib-starter/commit/92d0ad8c51016654db3b2761ea7c9cf556a37328))
+
 ## [1.15.4](https://github.com/bndynet/typescript-lib-starter/compare/v1.15.3...v1.15.4) (2023-12-12)
 
 
