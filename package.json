@@ -27,6 +27,7 @@
     "sr": "semantic-release --dry-run",
     "precommit": "lint-staged",
     "republish": "ts-node tools/prepare-republish.ts",
+    "update": "ncu -u",
     "init": "ts-node tools/init.ts"
   },
   "keywords": [
@@ -82,6 +83,7 @@
     "jsdom-global": "^3.0.2",
     "lint-staged": "^13.2.3",
     "lite-server": "^2.5.4",
+    "npm-check-updates": "^17.1.11",
     "organize-imports-cli": "^0.10.0",
     "postcss": "^7.0.14",
     "prettier": "^3.0.0",
