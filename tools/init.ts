@@ -21,7 +21,7 @@ cli.questions(['Your package name:', 'Your package description:', 'Author name:'
   pkgJson.version = '0.0.0-dev';
   pkgJson.description = pkgDescription;
   pkgJson.main = `dist/${libName}.umd.js`;
-  pkgJson.module = `dist/${libName}.es5.js`;
+  pkgJson.module = `dist/${libName}.esm.js`;
   if (username) {
     pkgJson.author.name = username;
   }
@@ -56,5 +56,6 @@ cli.questions(['Your package name:', 'Your package description:', 'Author name:'
   cli.beginRun('npm i', (code: number) => {
     code === 0 && cli.success('Your project is ready.')
     cli.print('');
+    cli.print('Please run `npm start` to start your work.')
    });
 });

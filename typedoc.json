@@ -1,8 +1,7 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "entryPoints": ["src/index.ts"],
-  "plugin": ["@bndynet/typedoc-theme"],
-  "theme": "my-theme",
+  "plugin": [],
   "hideGenerator": true,
   "out": "docs/api"
 }

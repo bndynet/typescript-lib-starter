@@ -1,23 +1,26 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "module":"es2015",
-    "target": "es2017",
-    "lib": ["es2017", "dom"],
+    "module":"ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
     "strict": true,
     "jsx": "react",
     "declaration": true,
+    "declarationDir": "./dist",
+    "declarationMap": true, 
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "listFiles": false,
-    "declarationDir": "./dist/types",
-    "outDir": "./dist/lib",
+    "outDir": "./dist",
     "typeRoots": [
       "./node_modules/@types"
     ]
   },
   "include": [
     "./src/**/*"
-  ]
+  ],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"] 
 }

@@ -11,15 +11,16 @@ import postcss from 'postcss';
 import terser from '@rollup/plugin-terser';
 
 const pkg = require('./package.json');
-
+const globalName = 'typescript-lib-starter'; // TODO: change this for your library which is the variable name of `window`
 const libraryName = pkg.name.indexOf('/') > 0 ? pkg.name.split('/')[1].toLocaleLowerCase() : pkg.name.toLocaleLowerCase();
+
 
 export default {
   input: `src/index.ts`,
   output: [
     {
       file: pkg.main,
-      name: libraryName,
+      name: globalName,
       format: 'umd',
       sourcemap: true,
       globals: {
@@ -68,7 +69,7 @@ export default {
     babel({
       babelHelpers: 'runtime',
       exclude: 'node_modules/**',
-      plugins: ['@babel/plugin-transform-runtime']
+      plugins: ['@babel/plugin-transform-runtime'],
     }),
 
     // Resolve source maps to the original source
