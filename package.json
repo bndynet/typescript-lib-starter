@@ -28,7 +28,8 @@
     "precommit": "lint-staged",
     "republish": "ts-node tools/prepare-republish.ts",
     "update": "ncu -u",
-    "init": "ts-node tools/init.ts"
+    "init": "ts-node tools/init.ts",
+    "prepare": "husky"
   },
   "keywords": [
     "typescript",
@@ -97,17 +98,10 @@
     "typedoc": "^0.27.4",
     "typescript": "^5.7.2"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "{src,test}/**/*.ts": [
       "organize-imports-cli",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "dependencies": {
