@@ -14,7 +14,7 @@ permissions:
   pull-requests: write
 
 env:
-  NODE_VERION: 18.x
+  NODE_VERSION: 20.x
 
 jobs:
   check-version:
@@ -51,10 +51,10 @@ jobs:
           path: ./dist
           key: dist-${{ needs.check-version.outputs.NEXT_RELEASE_VERSION }}
 
-      - name: Use Node.js ${{ env.NODE_VERION }}
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERION }}
+          node-version: ${{ env.NODE_VERSION }}
           registry-url: https://registry.npmjs.org
 
       - name: Publish to NPM

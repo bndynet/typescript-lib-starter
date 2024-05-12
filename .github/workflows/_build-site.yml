@@ -8,7 +8,7 @@ on:
         value: ${{ jobs.build.outputs.version }}
 
 env:
-  NODE_VERION: 18.x
+  NODE_VERSION: 20.x
 
 jobs:
   get-info:
@@ -28,10 +28,10 @@ jobs:
           persist-credentials: false
           ref: ${{ github.ref }}
 
-      - name: Use Node.js ${{ env.NODE_VERION }}
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERION }}
+          node-version: ${{ env.NODE_VERSION }}
           registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
