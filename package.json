@@ -29,7 +29,7 @@
     "republish": "ts-node tools/prepare-republish.ts",
     "update": "ncu -u",
     "init": "ts-node tools/init.ts",
-    "prepare": "husky"
+    "prepare": "node .husky/install.mjs"
   },
   "keywords": [
     "typescript",
