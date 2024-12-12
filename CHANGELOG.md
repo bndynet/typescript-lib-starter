@@ -1,3 +1,12 @@
+# [2.0.0](https://github.com/bndynet/typescript-lib-starter/compare/v1.16.1...v2.0.0) (2024-12-12)
+
+
+### Bug Fixes
+
+* **ci:** node version settings ([2a8387e](https://github.com/bndynet/typescript-lib-starter/commit/2a8387eac0dbdc7599c5b4a6dd88a319ddb80150))
+* migrate configuration for eslint ([4a67046](https://github.com/bndynet/typescript-lib-starter/commit/4a6704688f4edd2e4be1ec11fa4dfeb497aa15e5))
+* reinit husky config as the new version ([a2d0928](https://github.com/bndynet/typescript-lib-starter/commit/a2d0928e190a60a6ae633898bf4b07aa3e4fca7b))
+
 ## [1.16.1](https://github.com/bndynet/typescript-lib-starter/compare/v1.16.0...v1.16.1) (2024-02-21)
 
 
